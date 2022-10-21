@@ -20,30 +20,37 @@ export function HomePage() {
         <Accordion
           title="T - Tecido"
           description="Objetivo: Limpar o leito da ferida, desbridar o tecido desvitilizado"
+          srcImage="https://bit.ly/dan-abramov"
         />
         <Accordion
           title="T - Tecido"
           description="Objetivo: Limpar o leito da ferida, desbridar o tecido desvitilizado"
+          srcImage="https://bit.ly/dan-abramov"
         />
         <Accordion
           title="T - Tecido"
           description="Objetivo: Limpar o leito da ferida, desbridar o tecido desvitilizado"
+          srcImage="https://bit.ly/dan-abramov"
         />
         <Accordion
           title="T - Tecido"
           description="Objetivo: Limpar o leito da ferida, desbridar o tecido desvitilizado"
+          srcImage="https://bit.ly/dan-abramov"
         />
         <Accordion
           title="T - Tecido"
           description="Objetivo: Limpar o leito da ferida, desbridar o tecido desvitilizado"
+          srcImage="https://bit.ly/dan-abramov"
         />
         <Accordion
           title="T - Tecido"
           description="Objetivo: Limpar o leito da ferida, desbridar o tecido desvitilizado"
+          srcImage="https://bit.ly/dan-abramov"
         />
         <Accordion
           title="T - Tecido"
           description="Objetivo: Limpar o leito da ferida, desbridar o tecido desvitilizado"
+          srcImage="https://bit.ly/dan-abramov"
         />
       </Flex>
     </Box>
