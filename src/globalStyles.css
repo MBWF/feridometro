@@ -1,0 +1,17 @@
+* {
+  margin: 0;
+  padding: 0;
+  outline: 0;
+  box-sizing: border-box;
+  line-height: 100%;
+}
+
+ul,
+ol {
+  margin-left: 0;
+}
+
+img {
+  font-size: 0;
+}
+
