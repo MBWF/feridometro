@@ -43,7 +43,8 @@ export function SidebarMenu({ isOpen, onClose }: SidebarMenuProps) {
                   Instruções
                 </Text>
                 <Text fontSize={themeFonts.fontSizes.small}>
-                  Ainda não conhece o App?{''}
+                  Ainda não conhece o App?
+                  <br />
                   Não se preocupe, comece por aqui!
                 </Text>
               </Flex>
@@ -55,7 +56,7 @@ export function SidebarMenu({ isOpen, onClose }: SidebarMenuProps) {
 
               <Flex flexDirection="column" w="70%">
                 <Text fontSize={themeFonts.fontSizes.medium} fontWeight="700">
-                  Instruções
+                  Referências
                 </Text>
                 <Text fontSize={themeFonts.fontSizes.small}>
                   A base científica do aplicativo
