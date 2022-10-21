@@ -4,11 +4,11 @@ import {
   AccordionIcon,
   AccordionItem,
   AccordionPanel,
+  Button,
   Flex,
   Image,
   Text,
 } from '@chakra-ui/react';
-import { Rating } from 'react-simple-star-rating';
 
 import { themeFonts } from '../../styles/global';
 import { ButtonRedirect } from '../Button';
@@ -54,6 +54,7 @@ export function Accordion({ title, description, srcImage }: AccordionProps) {
           alignItems="center"
           justifyContent="center"
           flexDirection="column"
+          gap="1rem"
         >
           <Flex
             flexDirection="column"
@@ -61,13 +62,20 @@ export function Accordion({ title, description, srcImage }: AccordionProps) {
             width="50%"
             alignItems="center"
             justifyContent="center"
-            marginBottom="1rem"
           >
             <ButtonRedirect text="Avaliação" />
             <ButtonRedirect text="Tratamento" />
             <ButtonRedirect text="Cobertura" />
           </Flex>
+
           <RatingStars />
+
+          <ButtonRedirect
+            text="Avalie seu conhecimento"
+            bgColor="blue.600"
+            color="white"
+            border="none"
+          />
         </AccordionPanel>
       </AccordionItem>
     </ChakraAccordion>

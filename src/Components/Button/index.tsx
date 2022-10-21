@@ -1,14 +1,26 @@
 import { Button } from '@chakra-ui/react';
 
-export function ButtonRedirect({ text }: { text: string }) {
+interface ButtonRedirectProps {
+  text: string;
+  bgColor?: string;
+  color?: string;
+  border?: string;
+}
+
+export function ButtonRedirect({
+  text,
+  bgColor = 'transparent',
+  color = 'blue.500',
+  border = '1px solid gray',
+}: ButtonRedirectProps) {
   return (
     <>
       <Button
-        bgColor="transparent"
+        bgColor={bgColor}
         padding="0rem 1rem"
-        border="1px solid gray"
+        border={border}
         borderRadius="full"
-        color="blue.500"
+        color={color}
         fontSize="0.8rem"
       >
         {text}
