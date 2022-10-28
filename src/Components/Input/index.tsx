@@ -10,20 +10,13 @@ import {
 import { themeFonts } from '../../styles/global';
 
 type InputProps = {
-  label: string;
   inputIcon: React.ReactNode;
   inputType: string;
   placeholder?: string;
   helperText?: string;
 };
 
-export function Input({
-  label,
-  inputIcon,
-  placeholder,
-  inputType,
-  helperText,
-}: InputProps) {
+export function Input({ inputIcon, placeholder, inputType, helperText }: InputProps) {
   return (
     <FormControl>
       <InputGroup size="lg">

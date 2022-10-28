@@ -23,19 +23,9 @@ export function LoginPage() {
         padding="1.4rem"
       >
         <Stack spacing="1rem">
-          <Input
-            inputType="email"
-            label="Email"
-            inputIcon={<MdEmail />}
-            placeholder="nome@email.com"
-          />
+          <Input inputType="email" inputIcon={<MdEmail />} placeholder="nome@email.com" />
 
-          <Input
-            inputType="password"
-            label="Senha"
-            inputIcon={<BsFillKeyFill />}
-            placeholder="Senha"
-          />
+          <Input inputType="password" inputIcon={<BsFillKeyFill />} placeholder="Senha" />
 
           <Flex justifyContent="center">
             <ButtonRedirect
