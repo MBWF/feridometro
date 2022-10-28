@@ -13,7 +13,12 @@ import { theme, themeFonts } from '../../styles/global';
 export function RegisterPage() {
   return (
     <>
-      <Box bgColor="blue.200" height="100vh">
+      <Flex
+        flexDirection="column"
+        justifyContent="space-between"
+        bgColor="blue.200"
+        minHeight="100vh"
+      >
         <Header redirectLink="/" />
         <Flex justifyContent="center">
           <Image src={logoFeridometro} height="120px" />
@@ -25,8 +30,8 @@ export function RegisterPage() {
           width="100%"
           height="100%"
           mt="1.2rem"
-          borderRadius={themeFonts.borderRadius.xLarge}
-          padding="1.4rem"
+          borderTopRadius={themeFonts.borderRadius.xLarge}
+          padding="1.4rem 1.4rem 12% 1.4rem"
         >
           <Stack spacing="1rem">
             <Input inputType="text" inputIcon={<BsPersonSquare />} placeholder="Nome" />
@@ -65,7 +70,7 @@ export function RegisterPage() {
             </Flex>
           </Stack>
         </Stack>
-      </Box>
+      </Flex>
     </>
   );
 }
