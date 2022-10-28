@@ -12,20 +12,24 @@ export function LoginPage() {
   return (
     <Flex
       flexDirection="column"
-      justifyContent="space-between"
+      alignItems="center"
       bgColor="blue.200"
+      maxWidth="768px"
       minHeight="100vh"
     >
-      <Image src={logoFeridometro} />
+      <Flex flex="1" justifyContent="center" alignItems="center">
+        <Image src={logoFeridometro} />
+      </Flex>
 
       <Stack
+        flex="10"
         spacing="4rem"
         bgColor="white"
         width="100%"
         height="60%"
         mt="1.2rem"
         borderTopRadius={themeFonts.borderRadius.xLarge}
-        padding="1.4rem 1.4rem 25% 1.4rem"
+        padding="1.4rem"
       >
         <Stack spacing="1rem">
           <Input inputType="email" inputIcon={<MdEmail />} placeholder="nome@email.com" />

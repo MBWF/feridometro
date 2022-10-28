@@ -16,22 +16,24 @@ export function RegisterPage() {
       <Flex
         flexDirection="column"
         justifyContent="space-between"
+        maxWidth="768px"
         bgColor="blue.200"
         minHeight="100vh"
       >
         <Header redirectLink="/" />
-        <Flex justifyContent="center">
+        <Flex justifyContent="center" flex="1">
           <Image src={logoFeridometro} height="120px" />
         </Flex>
 
         <Stack
+          flex="10"
           spacing="4rem"
           bgColor="white"
           width="100%"
           height="100%"
           mt="1.2rem"
           borderTopRadius={themeFonts.borderRadius.xLarge}
-          padding="1.4rem 1.4rem 12% 1.4rem"
+          padding="1.4rem"
         >
           <Stack spacing="1rem">
             <Input inputType="text" inputIcon={<BsPersonSquare />} placeholder="Nome" />
