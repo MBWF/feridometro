@@ -10,17 +10,22 @@ import { theme, themeFonts } from '../../styles/global';
 
 export function LoginPage() {
   return (
-    <Box bgColor="blue.200" height="100vh">
+    <Flex
+      flexDirection="column"
+      justifyContent="space-between"
+      bgColor="blue.200"
+      minHeight="100vh"
+    >
       <Image src={logoFeridometro} />
 
       <Stack
         spacing="4rem"
         bgColor="white"
         width="100%"
-        height="100%"
+        height="60%"
         mt="1.2rem"
-        borderRadius={themeFonts.borderRadius.xLarge}
-        padding="1.4rem"
+        borderTopRadius={themeFonts.borderRadius.xLarge}
+        padding="1.4rem 1.4rem 25% 1.4rem"
       >
         <Stack spacing="1rem">
           <Input inputType="email" inputIcon={<MdEmail />} placeholder="nome@email.com" />
@@ -46,6 +51,6 @@ export function LoginPage() {
           </Link>
         </Flex>
       </Stack>
-    </Box>
+    </Flex>
   );
 }
