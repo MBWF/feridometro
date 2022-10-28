@@ -5,6 +5,7 @@ interface ButtonRedirectProps {
   bgColor?: string;
   color?: string;
   border?: string;
+  width?: string;
 }
 
 export function ButtonRedirect({
@@ -12,6 +13,7 @@ export function ButtonRedirect({
   bgColor = 'transparent',
   color = 'blue.500',
   border = '1px solid gray',
+  width,
 }: ButtonRedirectProps) {
   return (
     <>
@@ -22,6 +24,7 @@ export function ButtonRedirect({
         borderRadius="full"
         color={color}
         fontSize="0.8rem"
+        width={width}
       >
         {text}
       </Button>
