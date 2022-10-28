@@ -64,15 +64,6 @@ export function RegisterPage() {
               />
             </Flex>
           </Stack>
-
-          <Flex flexDirection="column" alignItems="center">
-            <Text>Ainda não possui uma conta?</Text>
-            <Link to="/register">
-              <Text textDecoration="underline" fontWeight="600">
-                Registre-se
-              </Text>
-            </Link>
-          </Flex>
         </Stack>
       </Box>
     </>
