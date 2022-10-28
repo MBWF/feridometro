@@ -1,6 +1,7 @@
 export const theme = {
   colors: {
     white_100: '#fafafa',
+    blue_400: '#058EE2',
     blue_600: '#058EE2',
   },
 };
