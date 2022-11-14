@@ -1,8 +1,7 @@
-import { Box, Flex, Image, Stack, Text } from '@chakra-ui/react';
+import { Flex, Image, Stack } from '@chakra-ui/react';
 import { BsFillKeyFill, BsPersonSquare } from 'react-icons/bs';
 import { FaGraduationCap } from 'react-icons/fa';
 import { MdEmail } from 'react-icons/md';
-import { Link } from 'react-router-dom';
 
 import logoFeridometro from '../../assets/logoFeridometro.png';
 import { ButtonRedirect } from '../../Components/Button';
@@ -20,7 +19,7 @@ export function RegisterPage() {
         bgColor="blue.200"
         minHeight="100vh"
       >
-        <Header redirectLink="/" />
+        <Header redirectLink="/" areaName="Criar Conta" />
         <Flex justifyContent="center" flex="1">
           <Image src={logoFeridometro} height="120px" />
         </Flex>

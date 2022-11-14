@@ -19,37 +19,38 @@ export function HomePage() {
       >
         <Accordion
           title="T - Tecido"
-          description="Objetivo: Limpar o leito da ferida, desbridar o tecido desvitilizado"
+          linkName="Tecido"
+          description="Objetivo: Limpar o leito da ferida, desbridar o tecido desvitilizado."
           srcImage="https://bit.ly/dan-abramov"
         />
         <Accordion
-          title="T - Tecido"
-          description="Objetivo: Limpar o leito da ferida, desbridar o tecido desvitilizado"
+          title="I - Inflamação"
+          linkName="Inflamação"
+          description="Objetivo: Controlar a inflamação, infecção, Biofilme."
           srcImage="https://bit.ly/dan-abramov"
         />
         <Accordion
-          title="T - Tecido"
-          description="Objetivo: Limpar o leito da ferida, desbridar o tecido desvitilizado"
+          title="M - Umidade/Axsudato"
+          linkName="Umidade"
+          description="Objetivo: Controlar a umidade/exsudato da lesão."
           srcImage="https://bit.ly/dan-abramov"
         />
         <Accordion
-          title="T - Tecido"
-          description="Objetivo: Limpar o leito da ferida, desbridar o tecido desvitilizado"
+          title="E - Bordas"
+          linkName="Bordas"
+          description="Objetivo: Redução do tamanho da ferida, epitelização."
           srcImage="https://bit.ly/dan-abramov"
         />
         <Accordion
-          title="T - Tecido"
-          description="Objetivo: Limpar o leito da ferida, desbridar o tecido desvitilizado"
+          title="R - Regeneração/Reparação"
+          linkName="Regeneração"
+          description="Objetivo: Fechamento da ferida, reparo do tecido."
           srcImage="https://bit.ly/dan-abramov"
         />
         <Accordion
-          title="T - Tecido"
-          description="Objetivo: Limpar o leito da ferida, desbridar o tecido desvitilizado"
-          srcImage="https://bit.ly/dan-abramov"
-        />
-        <Accordion
-          title="T - Tecido"
-          description="Objetivo: Limpar o leito da ferida, desbridar o tecido desvitilizado"
+          title="S - Fatores sociais"
+          linkName="FatoresSociais"
+          description="Objetivo: Educação do paciente, familia e cuidador, escuta ativa; compreensão do sistema de crenças"
           srcImage="https://bit.ly/dan-abramov"
         />
       </Flex>
