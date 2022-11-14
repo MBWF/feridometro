@@ -1,6 +1,8 @@
+import { useCallback } from 'react';
 import { Outlet, Route, Routes as AllRoutes, useParams } from 'react-router-dom';
 
 import { Header } from './Components/Header';
+import { CoveragePage } from './pages/Coverage';
 import { EvaluationPage } from './pages/Evaluation';
 import { HomePage } from './pages/Home';
 import { LoginPage } from './pages/Login';
@@ -11,12 +13,23 @@ import { theme } from './styles/global';
 function DetailsLayout() {
   const { issuePlace } = useParams<{ issuePlace: string }>();
 
-  const isTreatmentLocation = location.pathname.includes('treatment');
+  const handleLocationName = useCallback(() => {
+    let locationName = '';
+
+    if (location.pathname.includes('evaluation')) locationName = 'Avaliação';
+
+    if (location.pathname.includes('treatment')) locationName = 'Tratamento';
+
+    if (location.pathname.includes('coverage')) locationName = 'Cobertura';
+
+    return `${issuePlace}: ${locationName}`;
+  }, []);
+
   return (
     <>
       <Header
         redirectLink="/home"
-        areaName={`${issuePlace}: ${isTreatmentLocation ? 'Tratamento' : 'Avaliação'}`}
+        areaName={handleLocationName()}
         bgColor={theme.colors.blue_600}
         color={theme.colors.white_100}
       />
@@ -34,6 +47,7 @@ export function Routes() {
       <Route path="/:issuePlace" element={<DetailsLayout />}>
         <Route path="evaluation" element={<EvaluationPage />} />
         <Route path="treatment" element={<TreatmentPage />} />
+        <Route path="coverage" element={<CoveragePage />} />
       </Route>
     </AllRoutes>
   );

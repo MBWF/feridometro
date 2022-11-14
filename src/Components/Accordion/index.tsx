@@ -65,7 +65,7 @@ export function Accordion({ title, description, srcImage, linkName }: AccordionP
           >
             <ButtonRedirect text="Avaliação" link={`/${linkName}/evaluation`} />
             <ButtonRedirect text="Tratamento" link={`/${linkName}/treatment`} />
-            <ButtonRedirect text="Cobertura" link={`/${linkName}/evaluation`} />
+            <ButtonRedirect text="Cobertura" link={`/${linkName}/coverage`} />
           </Flex>
 
           <RatingStars />
