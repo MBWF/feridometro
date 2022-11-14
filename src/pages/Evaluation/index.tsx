@@ -1,4 +1,3 @@
-import { Stack } from '@chakra-ui/react';
 import {
   Accordion as ChakraAccordion,
   AccordionButton,
@@ -7,6 +6,7 @@ import {
   AccordionPanel,
   Flex,
   Image,
+  Stack,
   Text,
 } from '@chakra-ui/react';
 
