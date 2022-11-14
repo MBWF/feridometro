@@ -67,6 +67,7 @@ export function RegisterPage() {
                 bgColor={theme.colors.blue_600}
                 color="white"
                 width="15rem"
+                link=""
               />
             </Flex>
           </Stack>
