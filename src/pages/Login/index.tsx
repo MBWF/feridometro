@@ -19,15 +19,7 @@ export function LoginPage() {
       minHeight="100vh"
     >
       <Flex flex="1" justifyContent="center" alignItems="center">
-        <Image
-          src={logoFeridometro}
-          width={[
-            '100%', // 0-30em
-            '80%', // 30em-48em
-            '60%', // 48em-62em
-            '40%', // 62em+
-          ]}
-        />
+        <Image src={logoFeridometro} width={['100%', '80%', '60%', '40%']} />
       </Flex>
 
       <Stack
@@ -51,6 +43,7 @@ export function LoginPage() {
               bgColor={theme.colors.blue_600}
               color="white"
               width="15rem"
+              link="/home"
             />
           </Flex>
         </Stack>
