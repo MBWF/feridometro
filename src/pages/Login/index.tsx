@@ -1,4 +1,4 @@
-import { Box, Flex, Image, Stack, Text } from '@chakra-ui/react';
+import { Flex, Image, Stack, Text } from '@chakra-ui/react';
 import { BsFillKeyFill } from 'react-icons/bs';
 import { MdEmail } from 'react-icons/md';
 import { Link } from 'react-router-dom';
@@ -11,6 +11,7 @@ import { theme, themeFonts } from '../../styles/global';
 export function LoginPage() {
   return (
     <Flex
+      margin="0 auto"
       flexDirection="column"
       alignItems="center"
       bgColor="blue.200"
@@ -18,7 +19,15 @@ export function LoginPage() {
       minHeight="100vh"
     >
       <Flex flex="1" justifyContent="center" alignItems="center">
-        <Image src={logoFeridometro} />
+        <Image
+          src={logoFeridometro}
+          width={[
+            '100%', // 0-30em
+            '80%', // 30em-48em
+            '60%', // 48em-62em
+            '40%', // 62em+
+          ]}
+        />
       </Flex>
 
       <Stack

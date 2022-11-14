@@ -15,11 +15,12 @@ import RatingStars from '../Rating';
 
 interface AccordionProps {
   title: string;
-  description: string;
   srcImage: string;
+  linkName: string;
+  description: string;
 }
 
-export function Accordion({ title, description, srcImage }: AccordionProps) {
+export function Accordion({ title, description, srcImage, linkName }: AccordionProps) {
   return (
     <ChakraAccordion allowMultiple width="100%">
       <AccordionItem boxShadow="rgba(0, 0, 0, 0.16) 0px 1px 4px" padding="1rem">
@@ -62,9 +63,9 @@ export function Accordion({ title, description, srcImage }: AccordionProps) {
             alignItems="center"
             justifyContent="center"
           >
-            <ButtonRedirect text="Avaliação" />
-            <ButtonRedirect text="Tratamento" />
-            <ButtonRedirect text="Cobertura" />
+            <ButtonRedirect text="Avaliação" link={`/${linkName}/evaluation`} />
+            <ButtonRedirect text="Tratamento" link={`/${linkName}/evaluation`} />
+            <ButtonRedirect text="Cobertura" link={`/${linkName}/evaluation`} />
           </Flex>
 
           <RatingStars />
@@ -74,6 +75,7 @@ export function Accordion({ title, description, srcImage }: AccordionProps) {
             bgColor="blue.600"
             color="white"
             border="none"
+            link={`/${linkName}/evaluation`}
           />
         </AccordionPanel>
       </AccordionItem>
