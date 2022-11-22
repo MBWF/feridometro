@@ -1,4 +1,6 @@
 /* eslint-disable react/no-children-prop */
+import './styles.css';
+
 import {
   Button,
   Flex,
@@ -12,8 +14,7 @@ import {
   Text,
 } from '@chakra-ui/react';
 import { yupResolver } from '@hookform/resolvers/yup';
-import { onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
-import { useEffect } from 'react';
+import { signInWithEmailAndPassword } from 'firebase/auth';
 import { SubmitHandler, useForm } from 'react-hook-form';
 import { BsFillKeyFill } from 'react-icons/bs';
 import { MdEmail } from 'react-icons/md';
@@ -46,6 +47,7 @@ export function LoginPage() {
 
       if (user) {
         navigate('/home');
+        return;
       }
     } catch (err) {
       console.log(err);
@@ -53,80 +55,85 @@ export function LoginPage() {
   };
 
   return (
-    <Flex
-      margin="0 auto"
-      flexDirection="column"
-      alignItems="center"
-      bgColor="blue.200"
-      maxWidth="768px"
-      minHeight="100vh"
-    >
-      <Flex flex="1" justifyContent="center" alignItems="center">
-        <Image src={logoFeridometro} width={['100%', '80%', '60%', '40%']} />
-      </Flex>
+    <>
+      <div className="mobileScreen">
+        <Flex
+          margin="0 auto"
+          flexDirection="column"
+          alignItems="center"
+          bgColor="blue.200"
+          maxWidth="768px"
+          minHeight="100vh"
+        >
+          <Flex flex="1" justifyContent="center" alignItems="center">
+            <Image src={logoFeridometro} width={['100%', '80%', '60%', '40%']} />
+          </Flex>
 
-      <Stack
-        flex="10"
-        spacing="4rem"
-        bgColor="white"
-        width="100%"
-        height="60%"
-        mt="1.2rem"
-        borderTopRadius={themeFonts.borderRadius.xLarge}
-        padding="1.4rem"
-      >
-        <form onSubmit={handleSubmit(handleSubmitLogin)}>
-          <Stack spacing="1rem">
-            <FormControl isInvalid={!!errors.email}>
-              <InputGroup size="lg">
-                <InputLeftElement pointerEvents="none" children={<MdEmail />} />
-                <ChakraInput
-                  {...register('email')}
-                  placeholder="Digite seu Email"
-                  fontSize={themeFonts.fontSizes.smLarge}
-                  borderRadius={themeFonts.borderRadius.medium}
-                />
-              </InputGroup>
-            </FormControl>
+          <Stack
+            flex="10"
+            spacing="4rem"
+            bgColor="white"
+            width="100%"
+            height="60%"
+            mt="1.2rem"
+            borderTopRadius={themeFonts.borderRadius.xLarge}
+            padding="1.4rem"
+          >
+            <form onSubmit={handleSubmit(handleSubmitLogin)}>
+              <Stack spacing="1rem">
+                <FormControl isInvalid={!!errors.email}>
+                  <InputGroup size="lg">
+                    <InputLeftElement pointerEvents="none" children={<MdEmail />} />
+                    <ChakraInput
+                      {...register('email')}
+                      placeholder="Digite seu Email"
+                      fontSize={themeFonts.fontSizes.smLarge}
+                      borderRadius={themeFonts.borderRadius.medium}
+                    />
+                  </InputGroup>
+                </FormControl>
 
-            <FormControl isInvalid={!!errors.password}>
-              <InputGroup size="lg">
-                <InputLeftElement pointerEvents="none" children={<BsFillKeyFill />} />
-                <ChakraInput
-                  {...register('password')}
-                  placeholder="Digite sua Senha"
-                  fontSize={themeFonts.fontSizes.smLarge}
-                  borderRadius={themeFonts.borderRadius.medium}
-                />
-              </InputGroup>
-              <FormErrorMessage color="red">
-                {(errors.password || errors.email) && 'Os campos são obrigatórios'}
-              </FormErrorMessage>
-            </FormControl>
+                <FormControl isInvalid={!!errors.password}>
+                  <InputGroup size="lg">
+                    <InputLeftElement pointerEvents="none" children={<BsFillKeyFill />} />
+                    <ChakraInput
+                      {...register('password')}
+                      placeholder="Digite sua Senha"
+                      fontSize={themeFonts.fontSizes.smLarge}
+                      borderRadius={themeFonts.borderRadius.medium}
+                    />
+                  </InputGroup>
+                  <FormErrorMessage color="red">
+                    {(errors.password || errors.email) && 'Os campos são obrigatórios'}
+                  </FormErrorMessage>
+                </FormControl>
 
-            <Flex justifyContent="center">
-              <Button
-                type="submit"
-                bgColor={theme.colors.blue_600}
-                color="white"
-                width="15rem"
-                isLoading={isSubmitting}
-              >
-                Entrar
-              </Button>
+                <Flex justifyContent="center">
+                  <Button
+                    type="submit"
+                    bgColor={theme.colors.blue_600}
+                    color="white"
+                    width="15rem"
+                    isLoading={isSubmitting}
+                  >
+                    Entrar
+                  </Button>
+                </Flex>
+              </Stack>
+            </form>
+
+            <Flex flexDirection="column" alignItems="center">
+              <Text>Ainda não possui uma conta?</Text>
+              <Link to="/register">
+                <Text textDecoration="underline" fontWeight="600">
+                  Registre-se
+                </Text>
+              </Link>
             </Flex>
           </Stack>
-        </form>
-
-        <Flex flexDirection="column" alignItems="center">
-          <Text>Ainda não possui uma conta?</Text>
-          <Link to="/register">
-            <Text textDecoration="underline" fontWeight="600">
-              Registre-se
-            </Text>
-          </Link>
         </Flex>
-      </Stack>
-    </Flex>
+      </div>
+      <div className="mobileScreen"></div>
+    </>
   );
 }
