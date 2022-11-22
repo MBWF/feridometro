@@ -1,14 +1,57 @@
-import { Flex, Image, Stack, Text } from '@chakra-ui/react';
+/* eslint-disable react/no-children-prop */
+import {
+  Button,
+  Flex,
+  FormControl,
+  FormErrorMessage,
+  Image,
+  Input as ChakraInput,
+  InputGroup,
+  InputLeftElement,
+  Stack,
+  Text,
+} from '@chakra-ui/react';
+import { yupResolver } from '@hookform/resolvers/yup';
+import { onAuthStateChanged, signInWithEmailAndPassword, signOut } from 'firebase/auth';
+import { useEffect } from 'react';
+import { SubmitHandler, useForm } from 'react-hook-form';
 import { BsFillKeyFill } from 'react-icons/bs';
 import { MdEmail } from 'react-icons/md';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 import logoFeridometro from '../../assets/logoFeridometro.png';
-import { ButtonRedirect } from '../../Components/Button';
-import { Input } from '../../Components/Input';
+import { auth } from '../../firebase-config';
 import { theme, themeFonts } from '../../styles/global';
+import { inputSchema } from './InputSchema';
+
+type LoginInputs = {
+  email: string;
+  password: string;
+};
 
 export function LoginPage() {
+  const navigate = useNavigate();
+
+  const {
+    register,
+    handleSubmit,
+    formState: { errors, isSubmitting },
+  } = useForm<LoginInputs>({
+    resolver: yupResolver(inputSchema),
+  });
+
+  const handleSubmitLogin: SubmitHandler<LoginInputs> = async (data) => {
+    try {
+      const user = await signInWithEmailAndPassword(auth, data.email, data.password);
+
+      if (user) {
+        navigate('/home');
+      }
+    } catch (err) {
+      console.log(err);
+    }
+  };
+
   return (
     <Flex
       margin="0 auto"
@@ -32,21 +75,48 @@ export function LoginPage() {
         borderTopRadius={themeFonts.borderRadius.xLarge}
         padding="1.4rem"
       >
-        <Stack spacing="1rem">
-          <Input inputType="email" inputIcon={<MdEmail />} placeholder="nome@email.com" />
+        <form onSubmit={handleSubmit(handleSubmitLogin)}>
+          <Stack spacing="1rem">
+            <FormControl isInvalid={!!errors.email}>
+              <InputGroup size="lg">
+                <InputLeftElement pointerEvents="none" children={<MdEmail />} />
+                <ChakraInput
+                  {...register('email')}
+                  placeholder="Digite seu Email"
+                  fontSize={themeFonts.fontSizes.smLarge}
+                  borderRadius={themeFonts.borderRadius.medium}
+                />
+              </InputGroup>
+            </FormControl>
 
-          <Input inputType="password" inputIcon={<BsFillKeyFill />} placeholder="Senha" />
+            <FormControl isInvalid={!!errors.password}>
+              <InputGroup size="lg">
+                <InputLeftElement pointerEvents="none" children={<BsFillKeyFill />} />
+                <ChakraInput
+                  {...register('password')}
+                  placeholder="Digite sua Senha"
+                  fontSize={themeFonts.fontSizes.smLarge}
+                  borderRadius={themeFonts.borderRadius.medium}
+                />
+              </InputGroup>
+              <FormErrorMessage color="red">
+                {(errors.password || errors.email) && 'Os campos são obrigatórios'}
+              </FormErrorMessage>
+            </FormControl>
 
-          <Flex justifyContent="center">
-            <ButtonRedirect
-              text="Login"
-              bgColor={theme.colors.blue_600}
-              color="white"
-              width="15rem"
-              link="/home"
-            />
-          </Flex>
-        </Stack>
+            <Flex justifyContent="center">
+              <Button
+                type="submit"
+                bgColor={theme.colors.blue_600}
+                color="white"
+                width="15rem"
+                isLoading={isSubmitting}
+              >
+                Entrar
+              </Button>
+            </Flex>
+          </Stack>
+        </form>
 
         <Flex flexDirection="column" alignItems="center">
           <Text>Ainda não possui uma conta?</Text>

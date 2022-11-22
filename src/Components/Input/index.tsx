@@ -1,5 +1,7 @@
 /* eslint-disable react/no-children-prop */
 import {
+  ChakraProps,
+  ChakraStyledOptions,
   FormControl,
   FormHelperText,
   Input as ChakraInput,
@@ -9,14 +11,20 @@ import {
 
 import { themeFonts } from '../../styles/global';
 
-type InputProps = {
+interface InputProps extends ChakraStyledOptions {
   inputIcon: React.ReactNode;
-  inputType: string;
+  inputType?: string;
   placeholder?: string;
   helperText?: string;
-};
+}
 
-export function Input({ inputIcon, placeholder, inputType, helperText }: InputProps) {
+export function Input({
+  inputIcon,
+  placeholder,
+  inputType,
+  helperText,
+  ...props
+}: InputProps) {
   return (
     <FormControl>
       <InputGroup size="lg">
@@ -26,6 +34,7 @@ export function Input({ inputIcon, placeholder, inputType, helperText }: InputPr
           type={inputType}
           placeholder={placeholder}
           borderRadius={themeFonts.borderRadius.medium}
+          {...props}
         />
       </InputGroup>
       {helperText ? (
