@@ -1,12 +1,11 @@
 @media (min-width: 678px) {
   .mobileScreen {
     display: none;
-  }   
+  }
 }
 
 @media (max-width: 678px) {
   .desktopScreen {
     display: none;
-  }   
+  }
 }
-
