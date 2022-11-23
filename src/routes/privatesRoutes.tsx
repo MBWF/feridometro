@@ -1,18 +1,15 @@
-import { ReactNode } from 'react';
 import { Navigate, Outlet } from 'react-router-dom';
 
 import { auth } from '../firebase-config';
-import { useUser } from '../providers/User/useUser';
-
-interface PrivatesLayoutProps {
-  children: ReactNode;
-}
+import { UserProviderContext } from '../providers/User';
 
 export const PrivatesRoute = () => {
-  const { userData } = useUser();
-
-  if (userData?.email) {
-    return <Outlet />;
+  if (auth.currentUser?.email) {
+    return (
+      <UserProviderContext>
+        <Outlet />
+      </UserProviderContext>
+    );
   } else {
     return <Navigate to="/" />;
   }

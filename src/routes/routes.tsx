@@ -8,6 +8,7 @@ import { HomePage } from '../pages/Home';
 import { LoginPage } from '../pages/Login';
 import { RegisterPage } from '../pages/Register';
 import { TreatmentPage } from '../pages/Treatment';
+import { UserProviderContext } from '../providers/User';
 import { theme } from '../styles/global';
 import { PrivatesRoute } from './privatesRoutes';
 
