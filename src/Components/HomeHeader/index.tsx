@@ -1,12 +1,15 @@
 import { Box, IconButton, Text, useDisclosure } from '@chakra-ui/react';
 import { FiLogOut, FiMenu } from 'react-icons/fi';
 
+import { useUser } from '../../providers/User/useUser';
 import { theme, themeFonts } from '../../styles/global';
 import { SidebarMenu } from '../SidebarMenu';
 import { ButtonsContainer } from './styles';
 
 export function HomeHeader() {
   const { isOpen, onOpen, onClose } = useDisclosure();
+
+  const { userData, logout } = useUser();
 
   return (
     <>
@@ -15,7 +18,7 @@ export function HomeHeader() {
         <ButtonsContainer>
           <IconButton aria-label="open-menu" icon={<FiMenu />} onClick={onOpen} />
 
-          <IconButton aria-label="leave-app" icon={<FiLogOut />} />
+          <IconButton aria-label="leave-app" icon={<FiLogOut />} onClick={logout} />
         </ButtonsContainer>
 
         <Text
@@ -34,7 +37,7 @@ export function HomeHeader() {
           marginTop="1rem"
           fontWeight={700}
         >
-          Gabriel
+          {userData?.name}
         </Text>
       </Box>
     </>
