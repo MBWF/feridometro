@@ -62,7 +62,6 @@ export function LoginPage() {
         duration: 3000,
         isClosable: true,
       });
-      console.log(err);
     }
   };
 
