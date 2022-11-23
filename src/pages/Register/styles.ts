@@ -5,7 +5,7 @@ import { theme } from '../../styles/global';
 export const Container = styled.div`
   width: 100%;
   @media screen and (max-width: 678px) {
-    background-color: ${theme.colors.blue_400};
+    background-color: ${theme.colors.blue_200};
 
     .back-button {
       display: none;
@@ -35,7 +35,7 @@ export const Container = styled.div`
       }
     }
     .boxContainer {
-      background-color: ${theme.colors.blue_400};
+      background-color: ${theme.colors.blue_200};
     }
   }
 `;
