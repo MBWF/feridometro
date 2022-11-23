@@ -69,8 +69,8 @@ export function RegisterPage() {
         instituition: data.instituition,
         password: data.password,
       });
-      reset()
-      navigate('/')
+      reset();
+      navigate('/');
 
       toast({
         title: 'Sucesso',
@@ -98,7 +98,7 @@ export function RegisterPage() {
           <div>
             <Header redirectLink="/" areaName="Criar Conta" />
             <Flex justifyContent="center" flex="1">
-              <Image src={logoFeridometro} height={['140px', '160px', '250px']} />
+              <Image src={logoFeridometro} width={['70%', '70%', '80%', '95%']} />
             </Flex>
           </div>
         </div>

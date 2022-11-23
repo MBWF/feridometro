@@ -4,6 +4,7 @@ import {
   AccordionIcon,
   AccordionItem,
   AccordionPanel,
+  Box,
   Flex,
   Image,
   Stack,
@@ -15,8 +16,14 @@ import { themeFonts } from '../../styles/global';
 
 export function EvaluationPage() {
   return (
-    <Stack padding="1rem" fontFamily={themeFonts.fonts.title}>
-      <>
+    <Stack display="flex" justifyContent="center" alignItems="center" width="100%">
+      <Flex
+        maxWidth="768px"
+        flexDirection="column"
+        padding="1rem"
+        fontFamily={themeFonts.fonts.title}
+        gap="1rem"
+      >
         <Text>AVALIE OS TIPOS DE TECIDOS PRESENTES NO LEITO DA FERIDA</Text>
         {evaluation.map((evlt) => (
           <ChakraAccordion allowMultiple width="100%" key={evlt.title}>
@@ -120,7 +127,7 @@ export function EvaluationPage() {
             </AccordionItem>
           </ChakraAccordion>
         ))}
-      </>
+      </Flex>
     </Stack>
   );
 }

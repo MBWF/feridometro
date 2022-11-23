@@ -46,7 +46,6 @@ export function LoginPage() {
   });
 
   const handleSubmitLogin: SubmitHandler<LoginInputs> = async (data) => {
-    console.log(data);
     try {
       const user = await signInWithEmailAndPassword(auth, data.email, data.password);
 
