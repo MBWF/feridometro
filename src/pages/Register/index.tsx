@@ -69,6 +69,8 @@ export function RegisterPage() {
         instituition: data.instituition,
         password: data.password,
       });
+      reset()
+      navigate('/')
 
       toast({
         title: 'Sucesso',
