@@ -102,6 +102,7 @@ export function LoginPage() {
                   <InputGroup size="lg">
                     <InputLeftElement pointerEvents="none" children={<MdEmail />} />
                     <ChakraInput
+                      type="email"
                       {...register('email')}
                       onChange={(e) => setValue('email', e.target.value)}
                       placeholder="Digite seu Email"
@@ -176,6 +177,7 @@ export function LoginPage() {
                     <InputGroup size="lg">
                       <InputLeftElement pointerEvents="none" children={<MdEmail />} />
                       <ChakraInput
+                        type="email"
                         {...register('email')}
                         onChange={(e) => setValue('email', e.target.value)}
                         placeholder="Digite seu Email"

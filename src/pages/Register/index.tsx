@@ -1,18 +1,18 @@
 /* eslint-disable prettier/prettier */
 /* eslint-disable react/no-children-prop */
 
-
 import {
   Button,
   Flex,
-  FormControl, Image,
+  FormControl,
+  Image,
   Input as ChakraInput,
   InputGroup,
   InputLeftElement,
   Stack,
   Text,
   Toast,
-  useToast
+  useToast,
 } from '@chakra-ui/react';
 import { yupResolver } from '@hookform/resolvers/yup';
 import { FirebaseError } from 'firebase/app';
@@ -40,8 +40,8 @@ interface RegisterInputs {
 }
 
 export function RegisterPage() {
-  const navigate = useNavigate()
-  const toast = useToast()
+  const navigate = useNavigate();
+  const toast = useToast();
   const {
     register,
     handleSubmit,
@@ -76,27 +76,23 @@ export function RegisterPage() {
         status: 'success',
         duration: 3000,
         isClosable: true,
-      })
+      });
     } catch (error) {
-      reset()
+      reset();
       toast({
         title: 'Algo deu errado.',
         description: String(error),
         status: 'error',
         duration: 3000,
         isClosable: true,
-      })
+      });
     }
   };
 
   return (
     <Container>
-      <Flex
-        flexDirection="column"
-        justifyContent="space-between"
-        minHeight="100vh"
-      >
-        <div className='boxContainer' >
+      <Flex flexDirection="column" justifyContent="space-between" minHeight="100vh">
+        <div className="boxContainer">
           <div>
             <Header redirectLink="/" areaName="Criar Conta" />
             <Flex justifyContent="center" flex="1">
@@ -113,7 +109,7 @@ export function RegisterPage() {
           mt="1.2rem"
           borderTopRadius={themeFonts.borderRadius.xLarge}
           padding="1.4rem"
-          className='stack-ontainer'
+          className="stack-ontainer"
         >
           <form onSubmit={handleSubmit(handleSubmitRegister)}>
             <FormControl isDisabled={isSubmitting}>
@@ -143,6 +139,7 @@ export function RegisterPage() {
                 <InputGroup size="lg">
                   <InputLeftElement pointerEvents="none" children={<MdEmail />} />
                   <ChakraInput
+                    type="email"
                     {...register('email')}
                     placeholder="Digite seu Email"
                     fontSize={themeFonts.fontSizes.smLarge}
@@ -154,7 +151,7 @@ export function RegisterPage() {
                 <InputGroup size="lg">
                   <InputLeftElement pointerEvents="none" children={<BsFillKeyFill />} />
                   <ChakraInput
-                    type='password'
+                    type="password"
                     {...register('password')}
                     placeholder="Digite sua senha"
                     fontSize={themeFonts.fontSizes.smLarge}
@@ -166,7 +163,7 @@ export function RegisterPage() {
                 <InputGroup size="lg">
                   <InputLeftElement pointerEvents="none" children={<BsFillKeyFill />} />
                   <ChakraInput
-                    type='password'
+                    type="password"
                     {...register('passwordRepeat')}
                     placeholder="Digite sua senha"
                     fontSize={themeFonts.fontSizes.smLarge}
@@ -181,7 +178,12 @@ export function RegisterPage() {
                     : null}
                 </Text>
 
-                <Flex justifyContent="space-between" alignItems='center' flexDirection='column' height='5rem' >
+                <Flex
+                  justifyContent="space-between"
+                  alignItems="center"
+                  flexDirection="column"
+                  height="5rem"
+                >
                   <Button
                     type="submit"
                     bgColor={theme.colors.blue_600}
@@ -189,10 +191,15 @@ export function RegisterPage() {
                     width="15rem"
                     isLoading={isSubmitting}
                   >
-                    Entrar
+                    Criar conta
                   </Button>
 
-                  <Button onClick={() => navigate('/')} className='back-button' width="10rem" variant='link'>
+                  <Button
+                    onClick={() => navigate('/')}
+                    className="back-button"
+                    width="10rem"
+                    variant="link"
+                  >
                     Voltar para login
                   </Button>
                 </Flex>
