@@ -75,7 +75,7 @@ export function Accordion({ title, description, srcImage, linkName }: AccordionP
             bgColor="blue.600"
             color="white"
             border="none"
-            link={`/${linkName}/evaluation`}
+            link={`/${linkName}/quiz`}
           />
         </AccordionPanel>
       </AccordionItem>

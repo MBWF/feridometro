@@ -1,4 +1,4 @@
-import { Box, Flex, IconButton, Text, useDisclosure } from '@chakra-ui/react';
+import { Flex, IconButton, Text, useDisclosure } from '@chakra-ui/react';
 import { FiLogOut, FiMenu } from 'react-icons/fi';
 
 import { useUser } from '../../providers/User/useUser';

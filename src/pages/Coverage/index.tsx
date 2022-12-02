@@ -107,7 +107,15 @@ export function CoveragePage() {
                         flexDirection="column"
                         gap="1rem"
                       >
-                        <Text textAlign="justify">{child.description}</Text>
+                        {typeof child.description === 'object' ? (
+                          <UnorderedList>
+                            {child.description.map((e) => (
+                              <ListItem key={e}>{e}</ListItem>
+                            ))}
+                          </UnorderedList>
+                        ) : (
+                          <Text textAlign="justify">{child.description}</Text>
+                        )}
                       </AccordionPanel>
                     </AccordionItem>
                   ))}

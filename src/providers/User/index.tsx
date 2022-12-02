@@ -1,4 +1,4 @@
-import { onAuthStateChanged, signOut } from 'firebase/auth';
+import { onAuthStateChanged } from 'firebase/auth';
 import { getDocs, query, where } from 'firebase/firestore/lite';
 import { createContext, useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';

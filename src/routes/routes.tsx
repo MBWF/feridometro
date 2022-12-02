@@ -6,9 +6,11 @@ import { CoveragePage } from '../pages/Coverage';
 import { EvaluationPage } from '../pages/Evaluation';
 import { HomePage } from '../pages/Home';
 import { LoginPage } from '../pages/Login';
+import { QuizPage } from '../pages/Quiz';
+import { ReferencePage } from '../pages/References';
 import { RegisterPage } from '../pages/Register';
 import { TreatmentPage } from '../pages/Treatment';
-import { UserProviderContext } from '../providers/User';
+import { QuizProviderContext } from '../providers/Quiz';
 import { theme } from '../styles/global';
 import { PrivatesRoute } from './privatesRoutes';
 
@@ -47,7 +49,16 @@ export function Routes() {
       <Route path="/register" element={<RegisterPage />} />
       <Route element={<PrivatesRoute />}>
         <Route path="/home" element={<HomePage />} />
+        <Route path="/references" element={<ReferencePage />} />
         <Route path="/:issuePlace" element={<DetailsLayout />}>
+          <Route
+            path="quiz"
+            element={
+              <QuizProviderContext>
+                <QuizPage />
+              </QuizProviderContext>
+            }
+          />
           <Route path="evaluation" element={<EvaluationPage />} />
           <Route path="treatment" element={<TreatmentPage />} />
           <Route path="coverage" element={<CoveragePage />} />
