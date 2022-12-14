@@ -11,11 +11,23 @@ import {
   Text,
   UnorderedList,
 } from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
 
-import { treatmentMock } from '../../Mock/treatment';
+import { i_treatmentMock, treatmentMock } from '../../Mock/treatment';
 import { themeFonts } from '../../styles/global';
 
 export function TreatmentPage() {
+  const [currentMock, setCurrentMock] = useState<any[]>([]);
+
+  useEffect(() => {
+    if (location.pathname.includes('Tecido')) {
+      setCurrentMock(treatmentMock);
+    }
+    if (location.pathname.includes('Inflam')) {
+      setCurrentMock(i_treatmentMock);
+    }
+  }, []);
+
   return (
     <Stack
       padding="1rem"
