@@ -10,11 +10,24 @@ import {
   Stack,
   Text,
 } from '@chakra-ui/react';
+import { useEffect, useState } from 'react';
 
-import { evaluation } from '../../Mock/evaluation';
+import { i_evaluation, t_evaluation, T_evaluationProps } from '../../Mock/evaluation';
 import { themeFonts } from '../../styles/global';
 
 export function EvaluationPage() {
+  const [currentMock, setCurrentMock] = useState<T_evaluationProps[]>([]);
+
+  useEffect(() => {
+    console.log(location.pathname);
+    if (location.pathname.includes('Tecido')) {
+      setCurrentMock(t_evaluation);
+    }
+    if (location.pathname.includes('Inflamação')) {
+      setCurrentMock(i_evaluation);
+    }
+  }, []);
+
   return (
     <Stack display="flex" justifyContent="center" alignItems="center" width="100%">
       <Flex
@@ -25,16 +38,11 @@ export function EvaluationPage() {
         gap="1rem"
       >
         <Text>AVALIE OS TIPOS DE TECIDOS PRESENTES NO LEITO DA FERIDA</Text>
-        {evaluation.map((evlt) => (
+        {currentMock.map((evlt) => (
           <ChakraAccordion allowMultiple width="100%" key={evlt.title}>
             <AccordionItem boxShadow="rgba(0, 0, 0, 0.16) 0px 1px 4px" padding="1rem">
               <Flex alignItems="center">
-                <Image
-                  src={evlt.srcImage}
-                  height="50px"
-                  width="50px"
-                  borderRadius="full"
-                />
+                <Box bgColor={evlt.color} height="35px" width="50px" />
                 <Flex justifyContent="space-between" flex="2" paddingLeft="1rem">
                   <Flex flexDirection="column" width="90%">
                     <Text
