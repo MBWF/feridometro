@@ -1,11 +1,18 @@
+import AGE from '../assets/tratamentos/AGE.jpg';
+import alginatoDeCalcio from '../assets/tratamentos/Alginato de calcio.jpg';
 import Colagenase from '../assets/tratamentos/Colagenase.jpg';
 import espumas from '../assets/tratamentos/Espumas-de-poliuretano.jpg';
+import fibrinosilina from '../assets/tratamentos/Fibrinolisina.jpg';
 import hidrocoloide from '../assets/tratamentos/hidrocoloide.jpg';
 import Hidrofibras from '../assets/tratamentos/Hidrofibras.jpg';
 import solucoes from '../assets/tratamentos/Malha de acetato impregnada com soluções.jpg';
 import Papaina from '../assets/tratamentos/Papaina.jpg';
+import sulfadiazinaDePrata from '../assets/tratamentos/Sufadiazina de prata.jpg';
 import silicone from '../assets/tratamentos/tela de silicone.png';
 import Cadexomero from '../assets/tratamentos_infeccao/Cadexomero de iodo.jpg';
+import Cloreto from '../assets/tratamentos_infeccao/Cloreto de Diaquil Carmaboil_DACC.jpg';
+import CurativoPrata from '../assets/tratamentos_infeccao/CurativoPrata.jpg';
+import PHMB from '../assets/tratamentos_infeccao/Foto PHMB.jpg';
 
 export const coveragesMock = [
   {
@@ -287,6 +294,388 @@ export const coveragesMock = [
       {
         title: 'Frequência de troca:',
         description: 'A cada sete dias e/ou sempre que houver saturação ou deslocar',
+      },
+    ],
+  },
+  {
+    title: 'Ácidos Graxos Essenciais (AGE): ',
+    srcImage: AGE,
+    children: [
+      {
+        title: 'Composição',
+        description: [
+          'Óleo de origem vegetal composto pelos ácidos linoleico, linolenico, caprílico, caprico; vitaminaA, E + lectina de soja',
+        ],
+      },
+      {
+        title: 'Indicação',
+        description: [
+          'Queimaduras superficiais',
+          'Úlceras de qualquer etiologia com ou sem infeção',
+        ],
+      },
+      {
+        title: 'Benefícios:',
+        description: [
+          'Mantém o meio úmido',
+          'Promove o desbridamento autolítico',
+          'Acelera o processo de granulação tecidual',
+          'Auxilia o desbridamento autolitico',
+          'Pode ser utilizado em qualquer fase de cicatrização',
+        ],
+      },
+      {
+        title: 'Contraindicação',
+        description: [' Hipergranulação em casos de hipersensibilidade'],
+      },
+      {
+        title: 'Frequência de troca:',
+        description:
+          'Recomenda-se trocar no máximo a cada 24 horas ou sempre que o curativo secundário estiver saturado.',
+      },
+    ],
+  },
+  {
+    title: 'Alginato de cálcio:',
+    srcImage: alginatoDeCalcio,
+    children: [
+      {
+        title: 'Composição',
+        description: [
+          'Fibras de não tecido, derivado de algas marinhas, composto pelos ácidos gulurônico e manurônico, com íons de cálcio e sódio incorporado às fibras. Pode ser associado a prata.',
+        ],
+      },
+      {
+        title: 'Indicação',
+        description: [
+          'Feridas abertas, com perda de tecido, lesões cavitárias ou profundas, sangrantes, altamente exsudativas, com ou sem infecção.',
+        ],
+      },
+      {
+        title: 'Contraindicação',
+        description: [
+          'Feridas superficiais ou com pouca quantidade de exsudato e lesões por queimaduras.',
+        ],
+      },
+      {
+        title: 'Frequência de troca:',
+        description:
+          'Trocar sempre que estiver saturado; em feridas infectadas a cada 24 horas; feridas limpas e com sangramento a cada 48 ou 72h ou de acordo com a saturação;',
+      },
+    ],
+  },
+  {
+    title: 'Fibrinosilina: ',
+    srcImage: fibrinosilina,
+    children: [
+      {
+        title: 'Composição',
+        description: [
+          'Emoliente de origem bovina, composto de fibrolisina desoxirribonuclease a 1% de carafenicol.',
+        ],
+      },
+      {
+        title: 'Indicação',
+        description: ['Desbridamento enzimático'],
+      },
+
+      {
+        title: 'Contraindicação',
+        description: [
+          'Feridas com cicatrização por primeira intenção e reação alérgica em pessoas bovinas a substâncias bovinas.',
+        ],
+      },
+      {
+        title: 'Frequência de troca:',
+        description: 'A cada 24 horas',
+      },
+    ],
+  },
+  {
+    title: 'Sulfadiazina de prata: ',
+    srcImage: sulfadiazinaDePrata,
+    children: [
+      {
+        title: 'Composição',
+        description: ['Sulfadiazina de prata a 1% hidrofílico.'],
+      },
+      {
+        title: 'Indicação',
+        description: [
+          'Prevenção e tratamento de feridas com grande potencial de infecção generalizada (sepse): queimaduras, úlceras venosas, lesões por pressão e feridas cirúrgicas infectadas.',
+        ],
+      },
+
+      {
+        title: 'Contraindicação',
+        description: [
+          'Mulheres grávidas nos últimos três meses de gestação (tem ação teratogênica), crianças menores de 2 meses de idade e prematuros.',
+        ],
+      },
+      {
+        title: 'Frequência de troca:',
+        description:
+          'No máximo a cada 12 horas ou quando a cobertura secundária estiver saturada.',
+      },
+    ],
+  },
+];
+
+export const i_coveragesMock = [
+  {
+    title: 'Polihexanida (PHMB)',
+    srcImage: PHMB,
+    children: [
+      {
+        title: 'Composição',
+        description:
+          'Solução - Água purificada e polihexanida a 0,1% e/ou 0,2%; Gel 0,1% de Betaina, carboximetilcelulose, Cocoamidopropilbetaína, glicerina e água purificada. Algumas fórmulas também contêm uma substância antimicrobiana e um agente tensioativo.',
+      },
+      {
+        title: 'Indicação',
+        description:
+          'Limpeza e hidratação de feridas agudas ou crônicas; Desbridamento de crostas e necroses; Remoção de biofilme. Amplo espectro de atividade contra microrganismos sem evidências de resistência.',
+      },
+      {
+        title: 'Contraindicação',
+        description:
+          'Pessoas com hipersensibilidade a algum componente do produto; uso em cartilagem hialina e queimaduras de 3º grau.',
+      },
+      {
+        title: 'Frequência de troca',
+        description:
+          'solução troca a cada 24 horas; gel pode permanecer até 72 horas ou quando necessário',
+      },
+    ],
+  },
+  {
+    title: 'Curativos impregnados com prata',
+    srcImage: CurativoPrata,
+    children: [
+      {
+        title: 'Composição',
+        description:
+          'Espumas ou compressas não-aderentes impregnadas com prata; hidrofibras ou fibras hidrodesbridantes, associação com hidrocolóides e alginato.',
+      },
+      {
+        title: 'Mecanismo de ação',
+        description:
+          'Controle de bactérias presentes no leito da lesão; age pela liberação da prata em contato com o exsudato; a bactéria tem tropismo pela prata e, ao entrar em contato com a mesma impede de multiplicar-se',
+      },
+      {
+        title: 'Indicação',
+        description:
+          'Desbridamento de lesões com esfacelos e muito exsudativas; redução da multiplicação bacteriana no leito da ferida',
+      },
+      {
+        title: 'Contraindicação',
+        description: 'Feridas secas e em fase de granulação; exposição óssea',
+      },
+    ],
+  },
+  {
+    title: 'Cadexômero de Iodo',
+    srcImage: Cadexomero,
+    children: [
+      {
+        title: 'Composição',
+        description:
+          'Pomada castanho-escuro estéril, composto por cadexômero (microgrânulos de amido modificado), polietilenoglicol, poloxâmero e iodo',
+      },
+      {
+        title: 'Indicação',
+        description:
+          'Tratamento tópico de feridas exsudativas crônicas. Pode ser usado sob terapia de compressão, pode ser utilizado em feridas infectadas. É ativo contra MRSA e atua prevenindo a formação do biofilme. Coberturas contendo cadexômero de iodo têm apresentado ação contra bactérias planctônicas e biofilmes bacterianos de S. aureus e P. aeureginosa.',
+      },
+      {
+        title: 'Contraindicação',
+        description:
+          'Tecidos necróticos secos ou em doentes com sensibilidade conhecida ao iodo ou a qualquer um dos seus componentes. Crianças, mulheres grávidas ou que estejam amamentando, pessoas que sofram de insuficiência renal ou com distúrbios da tiroide (ex: tiroidite de Hashimoto ou bócio nodular não-tóxico).',
+      },
+      {
+        title: 'Frequência de troca',
+        description:
+          'A cada duas a três vezes por semana. Trocas diárias podem ser necessárias caso a lesão libere grandes quantidades de exsudato.',
+      },
+    ],
+  },
+  {
+    title: 'Cloreto de dialquil carbamoil (DACC)',
+    srcImage: Cloreto,
+    children: [
+      {
+        title: 'Composição',
+        description:
+          'Curativo antimicrobiano composto de tecido acetato impregnado com Cloreto de Dialquil Carbamoil (DACC);',
+      },
+      {
+        title: 'Indicação',
+        description:
+          'Todos os tipos de feridas exsudativas contaminadas, colonizadas ou infectadas, independentemente da sua etiologia. É considerado um antimicrobiano passivo com atividade antibiofilme, visto que atrai a carga microbiana do leito da lesão para o curativo.',
+      },
+      {
+        title: 'Contraindicação',
+        description:
+          'Não são conhecidas contraindicações específicas até o presente momento',
+      },
+      {
+        title: 'Frequência de troca',
+        description:
+          'Diariamente ou permanecer no local por até 7 dias em feridas úmidas sob compressão, porém em média ele permanece no local de 1 a 3 dias, devendo ser observado a quantidade de drenagem e saturação do curativo.',
+      },
+    ],
+  },
+];
+
+export const m_coveragesMock = [
+  {
+    title: 'Algumas coberturas possíveis:',
+    srcImage: '',
+    color: 'red.400',
+    children: [],
+    items: [
+      'AGE',
+      'Cobertura não aderente estéril',
+      'Hidrogel',
+      'Ácido hialurônico',
+      'Alginato de cálcio',
+      'Espumas/Hidrofibras',
+      'DACC',
+      'Terapia compressiva',
+      'Terapia por pressão negativa',
+    ],
+  },
+  {
+    title: 'Ácido Hialurônico 0,2%',
+    srcImage: '',
+    color: 'blue.600',
+    children: [
+      {
+        title: 'Composição',
+        description: 'Creme contendo 2mg de ácido hialurônico (sal sódico) por grama',
+      },
+      {
+        title: 'Indicação',
+        description:
+          'Acelera a cicatrização e a renovação epitelial do tecido comprometido de feridas abertas de diversas etiologias.',
+      },
+      {
+        title: 'Contraindicação',
+        description:
+          'Não deve ser utilizado por pacientes com história de alergia a qualquer um dos componentes da fórmula. não possui atividade antibacteriana, não deve ser utilizado isoladamente em feridas infectada',
+      },
+      {
+        title: 'Frequência de troca',
+        description: 'Realizar 1 a 3 aplicações tópicas ao dia.',
+      },
+    ],
+  },
+  {
+    title: 'Alginato de cálcio:',
+    srcImage: '',
+    color: 'blue.400',
+    children: [
+      {
+        title: 'Composição',
+        description: [
+          'Fibras de não tecido, derivado de algas marinhas, composto pelos ácidos gulurônico e manurônico, com íons de cálcio e sódio incorporado às fibras. Pode ser associado a prata.',
+        ],
+      },
+      {
+        title: 'Indicação',
+        description: [
+          'Feridas abertas, com perda de tecido, lesões cavitárias ou profundas, sangrantes, altamente exsudativas, com ou sem infecção.',
+        ],
+      },
+      {
+        title: 'Contraindicação',
+        description: [
+          'Feridas superficiais ou com pouca quantidade de exsudato e lesões por queimaduras.',
+        ],
+      },
+      {
+        title: 'Frequência de troca:',
+        description:
+          'Trocar sempre que estiver saturado; em feridas infectadas a cada 24 horas; feridas limpas e com sangramento a cada 48 ou 72h ou de acordo com a saturação;',
+      },
+    ],
+  },
+];
+
+export const e_coveragesMock = [
+  {
+    title: 'Fotobiomodulação (laserterapia):',
+    srcImage: '',
+    color: 'blue.600',
+    children: [
+      {
+        title: 'Indicação',
+        description:
+          'Tratamento de úlceras, feridas, deiscências, inflamações, edemas, micose de unha, herpes, pé-diabético e fissuras mamilares.',
+      },
+      {
+        title: 'Contraindicação',
+        description:
+          'Em casos de tumor maligno localizado ou irradiado; epilepsia; sobre a glândula tireóide; sobre abdome gravídico; para pessoas com elevada hipersensibilidade e em casos de trombose em veia pélvica ou veias profundas das pernas.',
+      },
+      {
+        title: 'Tratamento: ',
+        description:
+          'O tempo de duração do tratamento e número de sessões irá depender do caso clínico apresentado pelo paciente.',
+      },
+    ],
+  },
+  {
+    title: 'Terapia de oxigênio hiperbárica:',
+    srcImage: '',
+    color: 'blue.600',
+    children: [
+      {
+        title: 'Composição',
+        description: 'Creme contendo 2mg de ácido hialurônico (sal sódico) por grama',
+      },
+      {
+        title: 'Indicações',
+        description:
+          'Feridas infectadas, Necrose gangrenosa, Pés-diabéticos, Celulites e abscessos, Úlceras venosas e arteriais',
+      },
+      {
+        title: 'Contraindicação',
+        description:
+          'Gestação, Pneumotórax não tratado, Durante a administração dos quimioterápicos, Doxorrubicina e Bleomicina, Medicação Sulfamylon',
+      },
+      {
+        title: 'Frequência de troca',
+        description:
+          'ratamentos agudos podem necessitar de apenas 1 ou 2 sessões, porém  feridas crônicas podem precisar de mais de 30 sessões',
+      },
+    ],
+  },
+  {
+    title: 'Creme barreira:',
+    srcImage: '',
+    color: 'green.400',
+    children: [
+      {
+        title: 'Composição',
+        description: [
+          'Água, Parafina líquida, Petrolato, Cera microcristalina, Oleato de Glicerol, Álcool de Lanolina, Ácido Cítrico, Citrato de Magnésio, Ciclometicone, Glicerina, Metilparabeno, Propilparabeno e Propilenoglicol.',
+        ],
+      },
+      {
+        title: 'Mecanismos de ação: ',
+        description: [
+          'Creme hidrofóbico que oferece proteção contra urina e fezes, ao mesmo tempo em que hidrata a pele. Não possui nenhuma ação terapêutica cicatrizante. Sua ação é puramente mecânica de formação de uma barreira, impedindo o acesso de água no local protegido pelo creme.',
+        ],
+      },
+      {
+        title: 'Indicação:',
+        description:
+          'Hidratação da pele seca ou irritada, causada pelo exsudato oriundo da pele perilesional.',
+      },
+      {
+        title: 'Contraindicação',
+        description: ['Não há contraindicações'],
       },
     ],
   },

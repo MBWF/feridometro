@@ -54,12 +54,14 @@ export function HomePage() {
             linkName="Regeneração"
             description="Objetivo: Fechamento da ferida, reparo do tecido."
             srcImage={rIcon}
+            hasQuiz={false}
           />
           <Accordion
             title="S - Fatores sociais"
             linkName="FatoresSociais"
             description="Objetivo: Educação do paciente, familia e cuidador, escuta ativa; compreensão do sistema de crenças"
             srcImage={sIcon}
+            hasQuiz={false}
           />
         </Flex>
       </Flex>

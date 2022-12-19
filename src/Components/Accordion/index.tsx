@@ -18,9 +18,16 @@ interface AccordionProps {
   srcImage: string;
   linkName: string;
   description: string;
+  hasQuiz?: boolean;
 }
 
-export function Accordion({ title, description, srcImage, linkName }: AccordionProps) {
+export function Accordion({
+  title,
+  description,
+  srcImage,
+  linkName,
+  hasQuiz = true,
+}: AccordionProps) {
   return (
     <ChakraAccordion allowMultiple width="100%">
       <AccordionItem boxShadow="rgba(0, 0, 0, 0.16) 0px 1px 4px" padding="1rem">
@@ -65,18 +72,23 @@ export function Accordion({ title, description, srcImage, linkName }: AccordionP
           >
             <ButtonRedirect text="Avaliação" link={`/${linkName}/evaluation`} />
             <ButtonRedirect text="Tratamento" link={`/${linkName}/treatment`} />
-            <ButtonRedirect text="Cobertura" link={`/${linkName}/coverage`} />
+            {!(title[0] === 'S') ? (
+              <ButtonRedirect text="Cobertura" link={`/${linkName}/coverage`} />
+            ) : null}
           </Flex>
 
-          <RatingStars />
-
-          <ButtonRedirect
-            text="Avalie seu conhecimento"
-            bgColor="blue.600"
-            color="white"
-            border="none"
-            link={`/${linkName}/quiz`}
-          />
+          {hasQuiz ? (
+            <>
+              <RatingStars />
+              <ButtonRedirect
+                text="Avalie seu conhecimento"
+                bgColor="blue.600"
+                color="white"
+                border="none"
+                link={`/${linkName}/quiz`}
+              />
+            </>
+          ) : null}
         </AccordionPanel>
       </AccordionItem>
     </ChakraAccordion>

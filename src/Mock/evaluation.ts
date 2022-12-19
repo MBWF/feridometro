@@ -51,6 +51,8 @@ export const t_evaluation: T_evaluationProps[] = [
   {
     color: 'blue.600',
     title: 'Tecidos desvitelizados ou inviável',
+    description:
+      'Tecido morto, que perdeu suas propriedades físicas e atividade biológica, atrasa a cicatrização, proporciona meio adequado para crescimento de microorganismos, prolonga a resposta inflamatória e cria barreira para formação do tecido de granulação e epitelização. Além de ser fator predisponente para formação de biofilmes.',
     children: [
       {
         srcImage: liquefacao,
