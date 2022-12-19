@@ -211,3 +211,20 @@ export const r_treatmentMock = [
     ],
   },
 ];
+
+export const s_treatmentMock = [
+  {
+    color: 'blue.400',
+    title: 'Fatores familiares: ',
+    children: [],
+    items: ['Envolva paciente e família durante todo o plano de cuidados.'],
+  },
+  {
+    color: 'red.400',
+    title: 'Encaminhe o paciente para acompanhamento por equipe multiprofissional: ',
+    children: [],
+    items: [
+      'Nutricionista, fisioterapeuta, cirurgião vascular, endocrinologista, dermatologista, psicológico, cirurgião plástico',
+    ],
+  },
+];

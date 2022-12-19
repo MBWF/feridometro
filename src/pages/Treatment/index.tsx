@@ -18,6 +18,7 @@ import {
   i_treatmentMock,
   m_treatmentMock,
   r_treatmentMock,
+  s_treatmentMock,
   treatmentMock,
 } from '../../Mock/treatment';
 import { themeFonts } from '../../styles/global';
@@ -40,6 +41,9 @@ export function TreatmentPage() {
     }
     if (location.pathname.includes('Rege')) {
       setCurrentMock(r_treatmentMock);
+    }
+    if (location.pathname.includes('Fato')) {
+      setCurrentMock(s_treatmentMock);
     }
   }, []);
 
