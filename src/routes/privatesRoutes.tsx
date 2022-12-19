@@ -4,7 +4,7 @@ import { auth } from '../firebase-config';
 import { UserProviderContext } from '../providers/User';
 
 export const PrivatesRoute = () => {
-  // if (!auth.currentUser?.email) return <Navigate to="/" />;
+  if (!auth.currentUser?.email) return <Navigate to="/" />;
 
   return (
     <UserProviderContext>
