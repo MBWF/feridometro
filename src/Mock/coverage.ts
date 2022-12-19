@@ -5,7 +5,7 @@ import espumas from '../assets/tratamentos/Espumas-de-poliuretano.jpg';
 import fibrinosilina from '../assets/tratamentos/Fibrinolisina.jpg';
 import hidrocoloide from '../assets/tratamentos/hidrocoloide.jpg';
 import Hidrofibras from '../assets/tratamentos/Hidrofibras.jpg';
-import solucoes from '../assets/tratamentos/Malha de acetato impregnada com soluções.jpg';
+import solucoes from '../assets/tratamentos/malha.jpg';
 import Papaina from '../assets/tratamentos/Papaina.jpg';
 import sulfadiazinaDePrata from '../assets/tratamentos/Sufadiazina de prata.jpg';
 import silicone from '../assets/tratamentos/tela de silicone.png';
