@@ -19,6 +19,7 @@ import {
   e_coveragesMock,
   i_coveragesMock,
   m_coveragesMock,
+  r_coveragesMock,
 } from '../../Mock/coverage';
 import { themeFonts } from '../../styles/global';
 
@@ -37,6 +38,9 @@ export function CoveragePage() {
     }
     if (location.pathname.includes('Borda')) {
       setCurrentMock(e_coveragesMock);
+    }
+    if (location.pathname.includes('Rege')) {
+      setCurrentMock(r_coveragesMock);
     }
   }, []);
 

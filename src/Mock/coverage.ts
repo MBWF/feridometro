@@ -680,3 +680,87 @@ export const e_coveragesMock = [
     ],
   },
 ];
+
+export const r_coveragesMock = [
+  {
+    title: 'Laserterapia de baixa potencia: ',
+    srcImage: '',
+    color: 'green.600',
+    children: [
+      {
+        title: 'Mecanismo de ação',
+        description:
+          'Gera aumento da atividade mitocondrial, com consequente aumento de adenosinatrifosfato (ATP), vasodilatação, síntese proteica, ação antiinflamatória, neoangiogênese, proliferação epitelial e de fibroblastos, síntese e deposição de colágeno, revascularização e contração da ferida.',
+      },
+      {
+        title: 'Indicação',
+        description:
+          'Feridas agudas (feridas cirúrgicas) em processos de reparação tecidual, tais como traumatismos musculares, articulares, nervosos, ósseos e cutâneos.',
+      },
+      {
+        title: 'Contraindicações: ',
+        description:
+          'Em casos de tumor maligno localizado ou irradiado; epilepsia; sobre a glândula tireóide; sobre abdome gravídico; para pessoas com elevada hipersensibilidade e em casos de trombose em veia pélvica ou veias profundas das pernas.',
+      },
+      {
+        title: 'Periodicidade do Tratamento: ',
+        description:
+          'O tempo de duração do tratamento e número de sessões irá depender do caso clínico apresentado pelo paciente. Ainda não existem definições consensuais em relação à dose e ao comprimento de onda mais indicados para o tratamento de lesões.',
+      },
+    ],
+  },
+  {
+    title: 'Terapia por pressão negativa: ',
+    srcImage: '',
+    color: 'red.600',
+    children: [
+      {
+        title: 'Mecanismo de ação',
+        description:
+          'Tratamento não invasivo que promove a cicatrização da ferida por meio de uma pressão subatmosférica entre 50 mmHg e 150 mmHg, localizada e controlada. Estimula a proliferação celular , redução do edema e controle do exsudato.',
+      },
+      {
+        title: 'Indicação',
+        description:
+          'Feridas infectadas após desbridamento inicial, feridas infectadas em pós-operatório, osteíte e osteomielite. Síndrome compartimental, deiscência abdominal e peritonite, úlceras do pé diabético, lesão por pressão estágio 3 e 4; úlceras venosas; feridas traumáticas; enxerto de pele e retalho miocutâneo',
+      },
+      {
+        title: 'Contraindicações: ',
+        description:
+          'Feridas oncológicas, osteomielite não tratada ou fístulas não exploradas, lesões com tecido necrótico, distúrbios de Coagulação- sangramentos agudos moderados a severos na região da ferida.',
+      },
+      {
+        title: 'Periodicidade do Tratamento: ',
+        description:
+          'Troca dos curativos é de aproximadamente 48h e a duração da terapia deverá ser avaliada caso a caso.',
+      },
+    ],
+  },
+  {
+    title: 'Oxigenoterapia hiperbárica: ',
+    srcImage: '',
+    color: 'blue.600',
+    children: [
+      {
+        title: 'Mecanismo de ação',
+        description:
+          'Gera aumento da atividade mitocondrial, com consequente aumento de adenosinatrifosfato (ATP), vasodilatação, síntese proteica, ação antiinflamatória, neoangiogênese, proliferação epitelial e de fibroblastos, síntese e deposição de colágeno, revascularização e contração da ferida.',
+      },
+      {
+        title: 'Indicação',
+        description:
+          'Feridas de difícil cicatrização; Feridas infectadas; Embolia gasosa; Doença descompressiva; Embolia traumática pelo ar; Gangrena gasosa; Síndrome de Fournier; Outras infecções necrotizantes de partes moles: celulites, fasceítes e miosites; Isquemias traumáticas agudas: lesão por esmagamento, síndrome compartimental, reimplante de extremidadeamputada e outros; Osteomielite.',
+      },
+      {
+        title: 'Contraindicações: ',
+        description:
+          'Gestação; pneumotórax não tratado e durante a administração dos quimioterápicos Doxorrubicina e Bleomicina e a medicação Sulfamylon.',
+      },
+      {
+        title: 'Periodicidade do Tratamento: ',
+        description:
+          'Tratamentos agudos podem necessitar de apenas 1 ou 2 sessões, porém feridas crônicas podem precisar de mais de 30 sessões.',
+      },
+    ],
+  },
+];
