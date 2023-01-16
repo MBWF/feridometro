@@ -76,7 +76,11 @@ export function EvaluationPage() {
           <ChakraAccordion allowMultiple width="100%" key={evlt.title}>
             <AccordionItem boxShadow="rgba(0, 0, 0, 0.16) 0px 1px 4px" padding="1rem">
               <Flex alignItems="center">
-                <Box bgColor={evlt.color} height="35px" width="50px" />
+                {evlt?.color ? (
+                  <Box bgColor={evlt.color} height="35px" width="50px" />
+                ) : (
+                  <Image src={evlt.img} height="50px" width="50px" borderRadius="full" />
+                )}
                 <Flex justifyContent="space-between" flex="2" paddingLeft="1rem">
                   <Flex flexDirection="column" width="90%">
                     <Text

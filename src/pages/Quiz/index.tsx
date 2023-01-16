@@ -1,11 +1,17 @@
 import { Button, Stack } from '@chakra-ui/react';
 
 import { Quiz } from '../../Components/Quiz';
-import { QuizMock } from '../../Mock/quiz';
+import { e_QuizMock, i_QuizMock, m_QuizMock, QuizMock } from '../../Mock/quiz';
 import { useQuiz } from '../../providers/Quiz/useQuiz';
 
 export function QuizPage() {
   const { currentQuestionNumber, handleNextQuestion, wasAnswered } = useQuiz();
+
+  console.log(String(location.pathname.includes('Tecido/q')));
+
+  console.log(String(location.pathname.includes('Inflam/q')));
+
+  console.log(String(location.pathname.includes('Umidade/q')));
 
   return (
     <Stack
@@ -16,47 +22,27 @@ export function QuizPage() {
       alignItems="center"
       width="100%"
     >
-      {QuizMock.type.toLowerCase() === 't' && (
+      {QuizMock.type === 't' && String(location.pathname.includes('Tecido/q')) ? (
         <Quiz
           questionsData={QuizMock.questions[currentQuestionNumber]}
           questionType="t"
         />
-      )}
-
-      {QuizMock.type.toLowerCase() === 'i' && (
+      ) : QuizMock.type === 'i' && String(location.pathname.includes('Inflam/q')) ? (
         <Quiz
-          questionsData={QuizMock.questions[currentQuestionNumber]}
+          questionsData={i_QuizMock.questions[currentQuestionNumber]}
           questionType="i"
         />
-      )}
-
-      {QuizMock.type.toLowerCase() === 'm' && (
+      ) : QuizMock.type === 'm' && String(location.pathname.includes('Umidade/q')) ? (
         <Quiz
-          questionsData={QuizMock.questions[currentQuestionNumber]}
+          questionsData={m_QuizMock.questions[currentQuestionNumber]}
           questionType="m"
         />
-      )}
-
-      {QuizMock.type.toLowerCase() === 'e' && (
+      ) : QuizMock.type === 'e' && String(location.pathname.includes('Borda/q')) ? (
         <Quiz
-          questionsData={QuizMock.questions[currentQuestionNumber]}
+          questionsData={e_QuizMock.questions[currentQuestionNumber]}
           questionType="e"
         />
-      )}
-
-      {QuizMock.type.toLowerCase() === 'r' && (
-        <Quiz
-          questionsData={QuizMock.questions[currentQuestionNumber]}
-          questionType="r"
-        />
-      )}
-
-      {QuizMock.type.toLowerCase() === 's' && (
-        <Quiz
-          questionsData={QuizMock.questions[currentQuestionNumber]}
-          questionType="s"
-        />
-      )}
+      ) : null}
 
       <Button onClick={() => handleNextQuestion()} disabled={wasAnswered}>
         Continuar

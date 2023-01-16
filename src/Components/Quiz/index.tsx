@@ -9,7 +9,7 @@ interface QuizProps {
 }
 
 export function Quiz({ questionsData, questionType }: QuizProps) {
-  const { wasAnswered, handleAnswerQuestion } = useQuiz();
+  const { wasAnswered, handleAnswerQuestion, currentQuestionNumber } = useQuiz();
 
   const handleColors = (alternative: AlternativeProps) => {
     if (alternative.isCorrectAnswer) {
@@ -19,11 +19,13 @@ export function Quiz({ questionsData, questionType }: QuizProps) {
     return 'red';
   };
 
+  console.log(questionType);
+
   return (
     <>
       <Flex flexDirection="column">
         <Text fontWeight="bold" mb="0.4rem">
-          Questão: 1
+          Questão: {currentQuestionNumber + 1}
         </Text>
         <Text>{questionsData.title}</Text>
       </Flex>

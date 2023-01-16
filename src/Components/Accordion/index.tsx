@@ -72,7 +72,7 @@ export function Accordion({
           >
             <ButtonRedirect text="Avaliação" link={`/${linkName}/evaluation`} />
             <ButtonRedirect text="Tratamento" link={`/${linkName}/treatment`} />
-            {!(title[0] === 'S') ? (
+            {!(title[0] === 'S' || title[0] === 'M' || title[0] === 'E') ? (
               <ButtonRedirect text="Cobertura" link={`/${linkName}/coverage`} />
             ) : null}
           </Flex>

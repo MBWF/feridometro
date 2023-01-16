@@ -1,6 +1,11 @@
+import BordaComSolapamentoOuDescolamento from '../assets/BordaComSolapamentoOuDescolamento.png';
+import Epibolia from '../assets/Epibolia.jpg';
+import fibrose from '../assets/fibrose.png';
+import Hiperqueratose from '../assets/Hiperqueratose.jpg';
 import coagulacao from '../assets/LetraT_necrose-de-coagulacao.jpg';
 import liquefacao from '../assets/LETRAT_Necrose-de-liquefaçao.jpg';
 import gangrenosa from '../assets/LETRAT_NECROSE-GANGRENOSA.jpg';
+import macerada from '../assets/macerada.png';
 import epitelizacao from '../assets/Tecido-de-epitelizacao.jpg';
 import granulacao from '../assets/Tecido-de-granulação.jpg';
 
@@ -13,6 +18,7 @@ export interface T_evaluationChildrenProps {
 export interface T_evaluationProps {
   color: string;
   title: string;
+  img?: any;
   children: T_evaluationChildrenProps[];
   description?: string;
   points?: string[];
@@ -22,7 +28,7 @@ export const t_evaluationTitle =
   'AVALIE OS TIPOS DE TECIDOS PRESENTES NO LEITO DA FERIDA';
 export const i_evaluationTitle = '';
 export const m_evaluationTitle =
-  'Avalie a características do exsudato: quantidade, cor, odor, possíveis constituintes e aparência.';
+  'A avaliação do exsudato deve incluir: tipo, cor, consistência, volume e odor';
 export const e_evaluationTitle =
   '- O que você pode fazer para acelerar o avanço da borda da ferida?';
 export const r_evaluationTitle =
@@ -31,7 +37,7 @@ export const s_evaluationTitle = '';
 
 export const t_evaluation: T_evaluationProps[] = [
   {
-    color: 'orange.400',
+    color: 'red',
     title: 'Tecidos Viáveis',
     children: [
       {
@@ -49,7 +55,7 @@ export const t_evaluation: T_evaluationProps[] = [
     ],
   },
   {
-    color: 'blue.600',
+    color: 'black',
     title: 'Tecidos desvitelizados ou inviável',
     description:
       'Tecido morto, que perdeu suas propriedades físicas e atividade biológica, atrasa a cicatrização, proporciona meio adequado para crescimento de microorganismos, prolonga a resposta inflamatória e cria barreira para formação do tecido de granulação e epitelização. Além de ser fator predisponente para formação de biofilmes.',
@@ -141,48 +147,63 @@ export const m_evaluation: T_evaluationProps[] = [
   },
   {
     color: 'blue.400',
-    title: 'Quantidade de exsudato:',
+    title: 'Volume/características:',
     children: [],
-    points: ['Ausente', 'Pequena', 'Média', 'Grande'],
+    points: [
+      'Ausente: leito da ferida seco, sem umidade aparente. Não precisa de cobertura absorvente.Requer coberturas para aumentar a umidade: Hidrogel, Hidrocoloides, AGE, Ácido hialurônico, Filmes semipermeáveis, Coberturas antiaderentes.',
+      'Baixo: leito da ferida com umidade escassa. Requer coberturas que mantenham a umidade: hidrogel, hidrocoloide, malha não aderente, AGE, gaze úmida com soro.',
+      'Moderado: Leito da lesão saturado, contudo o fluído não compromete a pele perilesional. Drenagem 25% -75% do curativo. Coberturas absorventes: alginato, espumas/hidropolímeros, cadexômero iodo, hidrofibras.',
+      'Alto: leito da ferida com umidade intensa, com maceração nas bordas da ferida e na pele  perilesional. Requer coberturas com alta capacidade de absorção do exsudato: hidrofibras, fibra gelificante, polímeros superabsorventes, terapia por pressão negativa.',
+    ],
   },
   {
     color: 'red.400',
     title: 'ODOR:',
     children: [],
-    points: ['Ausente', 'Característico', 'Fétido', 'Pútrido'],
+    points: [
+      'Ausente: sem odor',
+      'Característico: odor suportável, exalado ao abrir o curativo',
+      'Fétido: odor desagradável, que leva a reação de afastamento',
+      'Pútrido: odor fétido de grande intensidade associado a carne em decomposição. É caracteristicamente forte e nauseante.',
+    ],
   },
 ];
 
 export const e_evaluation: T_evaluationProps[] = [
   {
-    color: 'orange.200',
+    color: '',
+    img: fibrose,
     title: 'Fibrose',
     description:
       'A borda se apresenta rígida, com excessiva proliferação fibrosa, semelhante ao tecido cicatricial, fortemente aderida ao leito da lesão, com coloração amarela ou rósea.',
     children: [],
   },
   {
-    color: 'red.400',
+    color: '',
     title: 'Macerada',
+    img: macerada,
     description:
       'Tecido esbranquiçado que surge nas bordas das lesões, pregas cutâneas e fístulas, devido excesso de umidade.',
     children: [],
   },
   {
-    color: 'blue.400',
+    color: '',
     title: 'Hiperqueratose',
+    img: Hiperqueratose,
     description:
       'Ocorre sobreposição da camada córnea da epiderme, formando um tecido caloso, bem espesso, endurecido, de cor amarelada',
     children: [],
   },
   {
-    color: 'green.400',
+    color: '',
+    img: Epibolia,
     title: 'Epibolia ou borda enrolada',
     description: 'Acontece quando as bordas de uma lesão se fecham prematuramente.',
     children: [],
   },
   {
-    color: 'yellow.400',
+    color: '',
+    img: BordaComSolapamentoOuDescolamento,
     title: 'Descolamento ou solapamento',
     description:
       'É o descolamento do tecido subjacente da pele íntegra devido à destruição tecidual. Ocorre quando as bordas não estão aderidas ao leito.',
@@ -207,20 +228,24 @@ export const s_evaluation: T_evaluationProps[] = [
     points: [
       'Idade',
       'Queixa',
-      'Do',
-      'Exame físico complet',
-      'Estado neurológic',
-      'Mobilidad',
-      'Condições vasculare',
-      'Estado nutriciona',
-      'Patologias associada',
-      'Medicações em us',
-      'Hábitos de vid',
-      'Exames laboratoriai',
-      'Qualidade de vid',
-      'Adesão ao tratament',
+      'Dor',
+      'Exame físico',
+      'Estado neurológico',
+      'Mobilidade',
+      'Condições vasculares',
+      'Estado nutricional',
+      'Patologias associadas',
+      'Medicações em uso',
+      'Hábitos de vida',
+      'Exames laboratoriais',
+      'Qualidade de vida',
+      'Adesão ao tratamento',
       'Conhecimento do paciente, familiares e cuidadores sobre a etiologia e os cuidados com a lesão.',
       'Necessidade de encaminhamento do paciente para avaliação interprofissional',
+      'Presença de cuidador',
+      'Tratamentos anteriores',
+      'Condição socioeconômica',
+      'Classificar o risco de lesão com escalas validadas',
     ],
   },
 ];

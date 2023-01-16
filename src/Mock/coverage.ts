@@ -1,24 +1,25 @@
-import AGE from '../assets/tratamentos/AGE.jpg';
+import carvaoAtivado from '../assets/carvaoAtivado.png';
+import fibrinosilina from '../assets/fibrinolisina.png';
+import AGE from '../assets/gota.png';
+import Hidrogel from '../assets/Hidrogel.jpg';
+import Cadexomero from '../assets/iodo_exdometro.jpg';
+import Papaina from '../assets/papaina.jpg';
+import PHMB from '../assets/phmb.jpg';
 import alginatoDeCalcio from '../assets/tratamentos/Alginato de calcio.jpg';
 import Colagenase from '../assets/tratamentos/Colagenase.jpg';
 import espumas from '../assets/tratamentos/Espumas-de-poliuretano.jpg';
-import fibrinosilina from '../assets/tratamentos/Fibrinolisina.jpg';
 import hidrocoloide from '../assets/tratamentos/hidrocoloide.jpg';
 import Hidrofibras from '../assets/tratamentos/Hidrofibras.jpg';
 import solucoes from '../assets/tratamentos/malha.jpg';
-import Papaina from '../assets/tratamentos/Papaina.jpg';
 import sulfadiazinaDePrata from '../assets/tratamentos/Sufadiazina de prata.jpg';
 import silicone from '../assets/tratamentos/tela de silicone.png';
-import Cadexomero from '../assets/tratamentos_infeccao/Cadexomero de iodo.jpg';
 import Cloreto from '../assets/tratamentos_infeccao/Cloreto de Diaquil Carmaboil_DACC.jpg';
 import CurativoPrata from '../assets/tratamentos_infeccao/CurativoPrata.jpg';
-import PHMB from '../assets/tratamentos_infeccao/Foto PHMB.jpg';
 
 export const coveragesMock = [
   {
     title: 'Hidrogel',
-    srcImage:
-      'https://cdn.awsli.com.br/1000x1000/518/518191/produto/79439722/9f1aa31806.jpg',
+    srcImage: Hidrogel,
     children: [
       {
         title: 'Composição',
@@ -46,7 +47,7 @@ export const coveragesMock = [
       {
         title: 'Composição',
         description:
-          '7 diferentes aminoácidos e por enzimas proteolíticas e peroxidases, extraídas do látex do mamão papaia (Carica papaya). Pode ser utilizada na forma de pó, gel ou pasta (creme). Em pó deve ser diluída imediatamente antes da execução do curativo e age por 20 minutos e, em gel ou pasta por 24 horas.',
+          'Enzima com ação proteolítica extraída do látex do mamão papaia (Carica papaya). Pode ser utilizada na forma de pó, gel ou pasta(creme). Em pó deve ser diluída imediatamente antes da execução do curativo e age por 20 minutos e, em gel ou pasta por 24 horas.',
       },
       {
         title: 'Indicação',
@@ -89,28 +90,28 @@ export const coveragesMock = [
     ],
   },
   {
-    title: 'Fibras poliabsorventes / Hidrofibras',
+    title: 'Fibras hidrodesbridantes',
     srcImage: Hidrofibras,
     children: [
       {
         title: 'Composição',
         description:
-          'Fibras de carboximetilcelulose hidrodesbridantes (ou fibras poliabsorventes); pode estar associado a 1,2% de prata iônica ou polímeros de poliacrilato de amônia envoltas em um núcleo acrílico.',
+          'Fibras de carboximetilcelulose hidrodesbridantes (ou fibras poliabsorventes), pode estar associado a 1,2% de prata iônica ou polímeros de poliacrilato de amônia envoltas em um núcleo acrílico',
       },
       {
         title: 'Indicação',
         description:
-          'Feridas exsudativas de diversas etiologias; desbridamento autolítico; Abrasões, lacerações e cortes; Queimaduras de 2º grau e 3º grau após desbridamento cirúrgico e com exsudato.',
+          'feridas exsudativas de diversas etiologias; desbridamento autolítico; abrasões, lacerações e cortes; queimaduras de 2º grau e 3º grau após desbridamento cirúrgico e com exsudato',
       },
       {
         title: 'Contraindicação',
         description:
-          'Não usar em necrose de coagulação; Feridas com pouca exsudação e uso limitado em feridas superficiais.',
+          'Não usar em necrose seca; feridas com pouca exsudação e uso limitado em feridas superficiais',
       },
       {
-        title: 'Frequência de troca',
+        title: 'Periodicidade de troca',
         description:
-          'Até 7 dias; Pode permanecer até 14 dias em casos de queimaduras; Trocar curativo secundário quando saturado ou em até 24 horas;;',
+          'Pode permanecer até sete dias; trocar curativo secundário quando saturado ou em até 24 horas',
       },
     ],
   },
@@ -219,7 +220,7 @@ export const coveragesMock = [
         description: [
           '- Compressa estéril, não aderente, constituída por um rolo ou cartela individual de malha de acetado de celulose (rayon)',
           '- Impregnada com soluções como: emulsão de petrolatum, parafina, ácidos graxos essenciais (AGE), óleo de melaleuca, prata.',
-          '- Pode vir com interface de silico',
+          '- Pode vir com interface de silicone',
         ],
       },
       {
@@ -326,7 +327,10 @@ export const coveragesMock = [
       },
       {
         title: 'Contraindicação',
-        description: [' Hipergranulação em casos de hipersensibilidade'],
+        description: [
+          ' Hipergranulação em casos de hipersensibilidade',
+          'Feridas tumorais',
+        ],
       },
       {
         title: 'Frequência de troca:',
@@ -365,7 +369,7 @@ export const coveragesMock = [
     ],
   },
   {
-    title: 'Fibrinosilina: ',
+    title: 'Fibrinolisina: ',
     srcImage: fibrinosilina,
     children: [
       {
@@ -410,6 +414,7 @@ export const coveragesMock = [
         title: 'Contraindicação',
         description: [
           'Mulheres grávidas nos últimos três meses de gestação (tem ação teratogênica), crianças menores de 2 meses de idade e prematuros.',
+          'Hipersensibilidade ao produto',
         ],
       },
       {
@@ -439,7 +444,7 @@ export const i_coveragesMock = [
       {
         title: 'Contraindicação',
         description:
-          'Pessoas com hipersensibilidade a algum componente do produto; uso em cartilagem hialina e queimaduras de 3º grau.',
+          'Pessoas com hipersensibilidade a algum componente do produto; uso em cartilagem hialina e queimaduras de 3º grau ou Durante os primeiros quatro meses de gravidez',
       },
       {
         title: 'Frequência de troca',
@@ -522,6 +527,30 @@ export const i_coveragesMock = [
         title: 'Frequência de troca',
         description:
           'Diariamente ou permanecer no local por até 7 dias em feridas úmidas sob compressão, porém em média ele permanece no local de 1 a 3 dias, devendo ser observado a quantidade de drenagem e saturação do curativo.',
+      },
+    ],
+  },
+  {
+    title: 'Carvão ativado com prata',
+    srcImage: carvaoAtivado,
+    children: [
+      {
+        title: 'Composição',
+        description:
+          'Curativo composto de carvão ativado e íons de prata, que pode vir em versão cortátil e não recortável (sachê)',
+      },
+      {
+        title: 'Indicação',
+        description:
+          'Feridas com moderada a elevada exsudação, com odor fétido e infectadas',
+      },
+      {
+        title: 'Contraindicação',
+        description: 'Feridas secas',
+      },
+      {
+        title: 'Periodicidade de troca',
+        description: 'Pode permanecer até 7 dias, trocar conforme a saturação',
       },
     ],
   },

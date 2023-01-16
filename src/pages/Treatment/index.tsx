@@ -6,6 +6,7 @@ import {
   AccordionPanel,
   Box,
   Flex,
+  Image,
   ListItem,
   Stack,
   Text,
@@ -56,11 +57,23 @@ export function TreatmentPage() {
       width="100%"
     >
       <Flex maxWidth="768px" minWidth="360px" flexDirection="column" gap="1rem">
+        {location.pathname.includes('Borda') && (
+          <Text>O que você pode fazer para acelerar o avanço da borda da ferida?</Text>
+        )}
         {currentMock?.map((treatment) => (
           <ChakraAccordion allowMultiple width="100%" key={treatment.title}>
             <AccordionItem boxShadow="rgba(0, 0, 0, 0.16) 0px 1px 4px" padding="1rem">
               <Flex alignItems="center">
-                <Box bgColor={treatment.color} height="35px" width="50px" />
+                {!treatment?.img ? (
+                  <Box bgColor={treatment.color} height="35px" width="50px" />
+                ) : (
+                  <Image
+                    src={treatment.img}
+                    height="50px"
+                    width="50px"
+                    borderRadius="full"
+                  />
+                )}
                 <Flex justifyContent="space-between" flex="2" paddingLeft="1rem">
                   <Flex flexDirection="column" width="90%">
                     <Text
@@ -91,7 +104,7 @@ export function TreatmentPage() {
                 flexDirection="column"
                 gap="1rem"
               >
-                {treatment?.items?.length > 0 ? (
+                {treatment?.items?.length > 0 && (
                   <UnorderedList width="100%">
                     {treatment.items.map((item: any) => (
                       <ListItem key={item} marginY="1rem">
@@ -99,7 +112,8 @@ export function TreatmentPage() {
                       </ListItem>
                     ))}
                   </UnorderedList>
-                ) : (
+                )}
+                {treatment?.children?.length > 0 && (
                   <>
                     {treatment.children.map((child: any) => (
                       <AccordionItem
@@ -109,7 +123,17 @@ export function TreatmentPage() {
                         padding="1rem"
                       >
                         <Flex alignItems="center">
-                          <Box bgColor={treatment.color} height="35px" width="50px" />
+                          {!child?.img ? (
+                            <Box bgColor={child.color} height="35px" width="50px" />
+                          ) : (
+                            <Image
+                              src={child.img}
+                              height="50px"
+                              width="50px"
+                              borderRadius="full"
+                            />
+                          )}
+
                           <Flex
                             justifyContent="space-between"
                             flex="2"
@@ -146,15 +170,14 @@ export function TreatmentPage() {
                           gap="1rem"
                         >
                           <Text textAlign="left">{child.description}</Text>
+                          <UnorderedList width="100%">
+                            {child?.child?.map((item: string) => (
+                              <ListItem key={item} marginY="1rem">
+                                {item}
+                              </ListItem>
+                            ))}
+                          </UnorderedList>
                         </AccordionPanel>
-
-                        <UnorderedList width="100%">
-                          {child?.items?.map((item: string) => (
-                            <ListItem key={item} marginY="1rem">
-                              {item}
-                            </ListItem>
-                          ))}
-                        </UnorderedList>
                       </AccordionItem>
                     ))}
                   </>

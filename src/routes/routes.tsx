@@ -15,7 +15,11 @@ import { theme } from '../styles/global';
 import { PrivatesRoute } from './privatesRoutes';
 
 function DetailsLayout() {
-  const { issuePlace } = useParams<{ issuePlace: string }>();
+  let { issuePlace } = useParams<{ issuePlace: string }>();
+
+  if (issuePlace === 'FatoresSociais') {
+    issuePlace = 'Fatores Sociais';
+  }
 
   const handleLocationName = useCallback(() => {
     let locationName = '';
