@@ -505,7 +505,7 @@ export const e_QuizMock = {
       title: 'A borda de uma lesão que enrola sobre si mesma deve ser chamada de:',
       alternatives: [
         {
-          isCorrectAnswer: false,
+          isCorrectAnswer: true,
           name: 'Epíbole',
         },
         {
@@ -513,7 +513,7 @@ export const e_QuizMock = {
           name: 'Hiperqueratose',
         },
         {
-          isCorrectAnswer: true,
+          isCorrectAnswer: false,
           name: 'Descolada',
         },
         {

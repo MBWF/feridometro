@@ -2,6 +2,7 @@ import { Button, Flex, Image, Text } from '@chakra-ui/react';
 
 import { AlternativeProps, QuestionsType } from '../../Mock/types';
 import { useQuiz } from '../../providers/Quiz/useQuiz';
+import { FontSizeContainer } from './styles';
 
 interface QuizProps {
   questionsData: QuestionsType;
@@ -32,7 +33,7 @@ export function Quiz({ questionsData, questionType }: QuizProps) {
         <Image src={questionsData?.url_image} width={['10rem', '12rem', '14rem']} />
       </Flex>
 
-      <Flex flexDirection="column" gap="1rem" width="100%" maxWidth="500px">
+      <FontSizeContainer>
         {questionsData?.alternatives?.map((alternative) => (
           <Button
             key={alternative?.name}
@@ -43,7 +44,7 @@ export function Quiz({ questionsData, questionType }: QuizProps) {
             {alternative.name}
           </Button>
         ))}
-      </Flex>
+      </FontSizeContainer>
     </>
   );
 }
