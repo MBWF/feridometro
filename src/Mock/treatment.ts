@@ -253,19 +253,18 @@ export const m_treatmentMock = [
       'Polímero superabsorvente',
       'Terapia por pressão negativa',
     ],
-    children: [
-      {
-        title: 'Hidrofibra',
-        color: 'orange.400',
-        description: '',
-        img: '',
-        child: [
-          ' Composição: Curativo absorvente composto por fibras de carboximetilcelulose sódica com ou sem prata iônica',
-          ' Indicação: Feridas com exsudado moderado a alto, feridas cavitárias. Desbridamento autolítico, induz hemostasia, possui alta capacidade de absorção de exsudato e sua retirada é atraumática preservando o tecido vitalizado',
-          ' Contraindicação: Feridas com pouca exsudação e uso limitado em feridas superficiais. Feridas com necrose seca ou tecido inviável',
-          ' Periodicidade de Troca: Trocar curativo secundário quando saturado ou em até 24 horas, a placa de hidrofibra poderá permanecer na ferida por até 7 dias',
-        ],
-      },
+    children: [],
+  },
+  {
+    title: 'Hidrofibra',
+    color: 'orange.400',
+    description: '',
+    img: '',
+    items: [
+      ' Composição: Curativo absorvente composto por fibras de carboximetilcelulose sódica com ou sem prata iônica',
+      ' Indicação: Feridas com exsudado moderado a alto, feridas cavitárias. Desbridamento autolítico, induz hemostasia, possui alta capacidade de absorção de exsudato e sua retirada é atraumática preservando o tecido vitalizado',
+      ' Contraindicação: Feridas com pouca exsudação e uso limitado em feridas superficiais. Feridas com necrose seca ou tecido inviável',
+      ' Periodicidade de Troca: Trocar curativo secundário quando saturado ou em até 24 horas, a placa de hidrofibra poderá permanecer na ferida por até 7 dias',
     ],
   },
   {
