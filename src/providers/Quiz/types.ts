@@ -1,6 +1,6 @@
 import { ReactNode } from 'react';
 
-import { AlternativeProps } from '../../Mock/types';
+import { AlternativeProps, QuestionsType } from '../../Mock/types';
 
 export interface QuizProviderProps {
   correctAnswers: number;
@@ -8,6 +8,8 @@ export interface QuizProviderProps {
   currentQuestionNumber: number;
   handleAnswerQuestion: (alternative: AlternativeProps, questionType: string) => void;
   handleNextQuestion: () => void;
+  currentQuestions: QuestionsType[];
+  currentQuestionType: string;
 }
 
 export type IQuizProvider = {

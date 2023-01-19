@@ -148,17 +148,15 @@ export function TreatmentPage() {
                                 {child.title}
                               </Text>
                             </Flex>
-                            {!(child?.items?.length > 0) && (
-                              <AccordionButton
-                                flex="1"
-                                p="0"
-                                bgColor="transparent"
-                                display="flex"
-                                justifyContent="center"
-                              >
-                                <AccordionIcon fontSize={themeFonts.fontSizes.large} />
-                              </AccordionButton>
-                            )}
+                            <AccordionButton
+                              flex="1"
+                              p="0"
+                              bgColor="transparent"
+                              display="flex"
+                              justifyContent="center"
+                            >
+                              <AccordionIcon fontSize={themeFonts.fontSizes.large} />
+                            </AccordionButton>
                           </Flex>
                         </Flex>
                         <AccordionPanel
@@ -172,6 +170,11 @@ export function TreatmentPage() {
                           <Text textAlign="left">{child.description}</Text>
                           <UnorderedList width="100%">
                             {child?.child?.map((item: string) => (
+                              <ListItem key={item} marginY="1rem">
+                                {item}
+                              </ListItem>
+                            ))}
+                            {child?.items?.map((item: string) => (
                               <ListItem key={item} marginY="1rem">
                                 {item}
                               </ListItem>

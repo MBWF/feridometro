@@ -11,6 +11,7 @@ export const UserProvider = createContext({} as UserProviderProps);
 export function UserProviderContext({ children }: IUserProvider) {
   const navigate = useNavigate();
   const [userData, setUserData] = useState<UserDataProps | null>(null);
+
   useEffect(() => {
     onAuthStateChanged(auth, async (currentUser) => {
       const getUserBd = query(

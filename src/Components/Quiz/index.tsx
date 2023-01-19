@@ -19,25 +19,23 @@ export function Quiz({ questionsData, questionType }: QuizProps) {
     return 'red';
   };
 
-  console.log(questionType);
-
   return (
     <>
-      <Flex flexDirection="column">
+      <Flex flexDirection="column" maxWidth="30rem">
         <Text fontWeight="bold" mb="0.4rem">
           Questão: {currentQuestionNumber + 1}
         </Text>
-        <Text>{questionsData.title}</Text>
+        <Text>{questionsData?.title}</Text>
       </Flex>
 
       <Flex>
-        <Image src={questionsData.url_image} width={['10rem', '12rem', '14rem']} />
+        <Image src={questionsData?.url_image} width={['10rem', '12rem', '14rem']} />
       </Flex>
 
       <Flex flexDirection="column" gap="1rem" width="100%" maxWidth="500px">
-        {questionsData.alternatives.map((alternative) => (
+        {questionsData?.alternatives?.map((alternative) => (
           <Button
-            key={alternative.name}
+            key={alternative?.name}
             onClick={() => handleAnswerQuestion(alternative, questionType)}
             disabled={wasAnswered}
             colorScheme={wasAnswered ? handleColors(alternative) : 'messenger'}
