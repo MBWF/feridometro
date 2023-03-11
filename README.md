@@ -1,4 +1,4 @@
-# Vite + React + Typescript + Eslint + Prettier + Chakara UI + React Router Dom + SASS
+# Vite + React + Typescript + Firebase
 
 A starter for React with Typescript with the fast Vite and all static code testing with Eslint and formatting with Prettier.
 
@@ -26,4 +26,4 @@ After the successfull installation of the packages: `yarn dev`
 
 If Everything is Good Then It Should Work, but let me new if something else happens
 
-Made with ❤️ by Gabriel⚡
+Made with ❤️ by Márcio⚡
