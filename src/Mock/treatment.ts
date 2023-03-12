@@ -9,7 +9,6 @@ import larvaIcon from '../assets/larvaIcon.png';
 import mecanico from '../assets/mecanico.jpg';
 import papaina from '../assets/papaina.jpg';
 import Tecidodeepitelizacao from '../assets/Tecidodeepitelizacao.jpg';
-import Tecidodegranulacao from '../assets/Tecidodegranulacao.jpg';
 
 export const treatmentMock = [
   {
@@ -155,7 +154,7 @@ export const treatmentMock = [
         title: 'Tecido de granulação',
         color: 'orange.400',
         description: '',
-        img: Tecidodegranulacao,
+        img: Tecidodeepitelizacao,
         items: [
           'Objetivo: Manutenção do meio úmido.',
           'Coberturas recomendadas: Tela de silicone, Tela de acetato impregnada com soluções (AGE ou Rayon), AGE, Hidrogel(com ou sem alginato)',
