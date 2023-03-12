@@ -1,9 +1,7 @@
 import BordaComSolapamentoOuDescolamento from '../assets/BordaComSolapamentoOuDescolamento.png';
 import Epibolia from '../assets/Epibolia.jpg';
-import fibrose from '../assets/fibrose.png';
 import Hiperqueratose from '../assets/Hiperqueratose.jpg';
 import coagulacao from '../assets/LetraT_necrose-de-coagulacao.jpg';
-import liquefacao from '../assets/LETRAT_Necrose-de-liquefaçao.jpg';
 import gangrenosa from '../assets/LETRAT_NECROSE-GANGRENOSA.jpg';
 import macerada from '../assets/macerada.png';
 import epitelizacao from '../assets/Tecido-de-epitelizacao.jpg';
@@ -61,7 +59,7 @@ export const t_evaluation: T_evaluationProps[] = [
       'Tecido morto, que perdeu suas propriedades físicas e atividade biológica, atrasa a cicatrização, proporciona meio adequado para crescimento de microorganismos, prolonga a resposta inflamatória e cria barreira para formação do tecido de granulação e epitelização. Além de ser fator predisponente para formação de biofilmes.',
     children: [
       {
-        srcImage: liquefacao,
+        srcImage: coagulacao,
         title: 'Necrose de liquefação ou esfacelo:',
         description:
           'Tecido necrótico/desvitalizado, úmido, avascular, amolecido; pode ser branco, amarelado, acastanhado ou verde; formado por bactérias, fibrina, elastina, colágeno e leucócitos, microorganismos e materiais proteicos. Pode estar frouxa ou firmemente aderido ao leito.',
@@ -172,7 +170,7 @@ export const m_evaluation: T_evaluationProps[] = [
 export const e_evaluation: T_evaluationProps[] = [
   {
     color: '',
-    img: fibrose,
+    img: coagulacao,
     title: 'Fibrose',
     description:
       'A borda se apresenta rígida, com excessiva proliferação fibrosa, semelhante ao tecido cicatricial, fortemente aderida ao leito da lesão, com coloração amarela ou rósea.',

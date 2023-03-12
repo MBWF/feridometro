@@ -1,11 +1,8 @@
 import e05 from '../assets/5-E.jpg';
 import e06 from '../assets/6-E.jpg';
 import e07 from '../assets/7-E.png';
-import t03 from '../assets/LETRAT_hipergranulaçao.jpg';
 import t01 from '../assets/LETRAT_NECROSE_LIQUEFACAO.jpg';
 import t02 from '../assets/LetraT_necrose-de-coagulacao.jpg';
-import t07 from '../assets/LetraT_necrose-de-coagulacao.jpg';
-import t04 from '../assets/LETRAT_Necrose-de-liquefaçao.jpg';
 import t05 from '../assets/LETRAT_NECROSE-GANGRENOSA.jpg';
 
 export const QuizMock = {
@@ -56,7 +53,7 @@ export const QuizMock = {
       ],
     },
     {
-      url_image: t03,
+      url_image: t02,
       title: 'Qual o tipo de tecido que está presente no leito dessa lesão?',
       alternatives: [
         {
@@ -78,7 +75,7 @@ export const QuizMock = {
       ],
     },
     {
-      url_image: t04,
+      url_image: t02,
       title: 'Qual o tipo de tecido que está presente no leito dessa lesão?',
       alternatives: [
         {
@@ -145,7 +142,7 @@ export const QuizMock = {
       ],
     },
     {
-      url_image: t07,
+      url_image: t02,
       title:
         'Paciente idoso, 65 anos, acamado, apresenta lesão por pressão localizada na região sacro-glútea. Qual o tipo de tecido que está presente no leito dessa lesão?',
       alternatives: [
